@@ -94,6 +94,8 @@
 .home .tint-silver{background:linear-gradient(160deg,#eff1f4,#d6dae0)}
 .home .tint-copper{background:linear-gradient(160deg,#fde5d6,#f4bf9d)}
 .home .tint-lithium{background:linear-gradient(160deg,#dcf3f1,#b3e0dc)}
+.home .tint-lists{background:linear-gradient(160deg,#e3f6f2,#bfe8df)}
+.home .tint-junk{background:linear-gradient(160deg,#ffe8bf,#ffc065)}
 .home .tile-body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
 .home .id{display:flex;align-items:center;gap:14px}
 .home .id img{width:52px;height:52px;border-radius:12px;flex:none;box-shadow:0 2px 8px rgba(0,0,0,.18)}

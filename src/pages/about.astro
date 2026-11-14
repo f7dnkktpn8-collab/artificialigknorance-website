@@ -13,7 +13,7 @@ const pageStructuredData = {
             url: SITE_URL + '/about/',
             name: 'About Artificial Igknorance',
             description:
-                'Artificial Igknorance is an iOS app brand. Privacy-first, on-device apps for escalator mechanics, family health, household bills, and precious metals.',
+                'Artificial Igknorance is an app brand. Privacy-first apps for escalator mechanics, family health, family lists, household bills, precious metals and a robot puzzle game.',
             isPartOf: { '@id': SITE_URL + '/#website' },
             about: { '@id': SITE_URL + '/#organization' },
             mainEntity: { '@id': SITE_URL + '/#organization' },
@@ -32,7 +32,7 @@ const pageStructuredData = {
 
 <Layout
     title="About | Artificial Igknorance | Privacy-First iOS Apps"
-    description="Artificial Igknorance is an iOS app brand: privacy-first apps for escalator mechanics, family health records, household bills, and precious metals. No accounts, no cloud, no telemetry."
+    description="Artificial Igknorance is an app brand: privacy-first apps for escalator mechanics, family health records, family lists, household bills, precious metals and a robot puzzle game. Most need no account and keep your data on your phone."
     twitterCard="summary_large_image"
     smartAppId="6756789866"
     datePublished="2026-05-08"
@@ -76,13 +76,13 @@ const pageStructuredData = {
             Artificial Igknorance is the brand name for the iOS apps on this site.
             The name is a deliberate play on "artificial intelligence", a reminder that the
             smartest software isn't the one that knows everything about you. It's the one that's
-            strategically ignorant. Our apps don't need your name, your email, your bank login, or
+            strategically ignorant. Most of our apps don't need your name, your email, your bank login, or
             your cloud account to work. The misspelling is on purpose.
         </p>
 
         <h2 class="text-3xl font-bold mb-4 mt-12">What we ship</h2>
         <p class="text-body mb-6">
-            Nine apps live on the App Store today, across seven areas:
+            Eleven apps live on the App Store today, across nine areas:
         </p>
         <ul class="text-body space-y-2 mb-6">
             <li>
@@ -127,6 +127,19 @@ const pageStructuredData = {
                 photos and weights, per-trip packing lists, day-pack sublists, and an Everyday Carry
                 list. Everything stored on-device.
             </li>
+            <li>
+                <strong class="text-ink"><a href="/family-lists/" class="text-teal-700 hover:text-teal-900 underline">Family Lists</a></strong>:
+                a grocery list your household shares, gift wish lists where the person you are buying
+                for never sees what was bought, and a planner for big family dinners. On iPhone, iPad
+                and Android. It is the one app that needs an account, because the lists have to reach
+                everyone's phone.
+            </li>
+            <li>
+                <strong class="text-ink"><a href="/junkyard-titans/" class="text-amber-700 hover:text-amber-900 underline">Junkyard Titans</a></strong>:
+                a block puzzle where crushed lines pay out robot parts, and the robots you build fight
+                in the Arena. Trade with friends, collect cards, hatch a pet. No ads, no chat. On iPhone,
+                iPad and Android.
+            </li>
         </ul>
 
         <h2 class="text-3xl font-bold mb-4 mt-12">Why we build this way</h2>
@@ -135,9 +148,9 @@ const pageStructuredData = {
             shapes everything:
         </p>
         <ul class="text-body space-y-2 mb-6">
-            <li>• <strong class="text-ink">No accounts.</strong> Open the app, start working. There's no signup, no email confirmation, no password to forget.</li>
-            <li>• <strong class="text-ink">On-device by default.</strong> Your records, your routes, your portfolios, your medical history, all stored locally on your iPhone. Nothing leaves the device unless you explicitly export it, with two named exceptions: apps with AI coaching send only what's needed to generate your plan, never stored afterward and never tied to an account, and optional AI scanning in HealthTrail Medical and SnapLedger sends the photo or file you chose to scan to our AI provider to read it, and it is not used to train their models, see our <a href="/privacy/" class="text-accent hover:text-accent-deep underline">Privacy Policy</a>.</li>
-            <li>• <strong class="text-ink">No telemetry.</strong> No analytics SDKs, no third-party trackers, no behavior pings home. We don't know how you use the app, and we don't need to.</li>
+            <li>• <strong class="text-ink">Almost no accounts.</strong> Open the app, start working. There's no signup, no email confirmation, no password to forget. The one exception is Family Lists, which has to know who is in your family so the lists reach their phones.</li>
+            <li>• <strong class="text-ink">On-device by default.</strong> Your records, your routes, your portfolios, your medical history, all stored locally on your iPhone. Nothing leaves the device unless you explicitly export it, with two named exceptions: apps with AI coaching send only what's needed to generate your plan, never stored afterward and never tied to an account, and optional AI scanning in HealthTrail Medical and SnapLedger sends the photo or file you chose to scan to our AI provider to read it, and it is not used to train their models. Family Lists keeps your shared lists on our server so your family can see them, and Junkyard Titans keeps a random game ID, a game-made name and your progress on our server so friends and trading work. See our <a href="/privacy/" class="text-accent hover:text-accent-deep underline">Privacy Policy</a>.</li>
+            <li>• <strong class="text-ink">Almost no telemetry.</strong> No third-party analytics, no advertising trackers. We don't know how you use most of the apps, and we don't need to. The exception is Junkyard Titans, where simple progress steps go to our own server so we can balance the game. Crash reports in Junkyard Titans and Family Lists go to Sentry.</li>
             <li>• <strong class="text-ink">No subscriptions trap.</strong> Every app is free to download. Pro subscriptions for deeper features (portfolio tracking, packing-list tools, advanced calculators) always start with a free trial. No dark patterns, no surprise auto-renew.</li>
         </ul>
 
@@ -185,7 +198,7 @@ const pageStructuredData = {
     <section class="text-center mb-16 bg-gradient-to-br from-blue-500/15 to-cyan-500/15 rounded-3xl p-8 md:p-12 border border-blue-400/20">
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">Try the apps</h2>
         <p class="text-body text-lg mb-6 max-w-2xl mx-auto">
-            All nine apps are free to download from the App Store. No account, no signup, and no data leaves your device beyond what AI coaching and optional AI scanning need to do their job.
+            All eleven apps are free to download. Ten of them need no account and no signup. Most keep everything on your device, and the Privacy Policy names every exception.
         </p>
         <a href="/" class="inline-block text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 no-underline bg-accent hover:bg-accent-deep">
             See the apps →

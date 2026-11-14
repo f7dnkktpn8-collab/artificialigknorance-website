@@ -31,7 +31,9 @@ const APPS = [
   { name: 'Silver Watcher',          id: '6760270695', cc: 'us', page: 'src/pages/silver-watcher.astro' },
   { name: 'Copper Watcher',          id: '6757655923', cc: 'us', page: 'src/pages/copper-watcher.astro' },
   { name: 'Lithium Watcher',         id: '6761344726', cc: 'us', page: 'src/pages/lithium-watcher.astro' },
-  { name: 'RidgePacker',             id: '6766699306', cc: 'us', page: 'src/pages/ridgepacker.astro' }
+  { name: 'RidgePacker',             id: '6766699306', cc: 'us', page: 'src/pages/ridgepacker.astro' },
+  { name: 'Family Lists',            id: '6813696329', cc: 'us', page: 'src/pages/family-lists/index.astro' },
+  { name: 'Junkyard Titans',         id: '6826464717', cc: 'us', page: 'src/pages/junkyard-titans.astro' }
 ];
 
 async function fetchApp({ id, cc }) {

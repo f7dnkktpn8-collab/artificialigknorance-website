@@ -1,0 +1,244 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const SITE_URL = 'https://artificialigknorance.com';
+const APP_STORE_URL = 'https://apps.apple.com/us/app/family-lists/id6813696329';
+const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.artificialigknorance.familylists';
+const APP_ICON = '/images/family-lists-icon.webp';
+
+const faqs = [
+    {
+        q: 'What is Family Lists?',
+        a: 'A free app for families. It has a grocery list your household shares, gift wish lists where the person you are buying for never sees what has been bought, and a planner for big family dinners. It runs on iPhone, iPad and Android.'
+    },
+    {
+        q: 'Is it free?',
+        a: 'Yes. Free to download and free to use, with no ads, no purchases and nothing locked.'
+    },
+    {
+        q: 'Do I need an account?',
+        a: "Yes, a simple one, because the lists have to reach everyone's phone. You sign in with Apple or with a secure code we email you. There's no password and no long form to fill in."
+    },
+    {
+        q: 'Can the person I buy a gift for see that I bought it?',
+        a: "No. Your own wish list never shows what has or hasn't been bought from it, and that rule is enforced on our server, not just in the app. Everyone else in the family can see that an item is taken, so nobody doubles up. Marking a gift bought is press and hold, so a stray tap in front of the wrong person gives nothing away."
+    },
+    {
+        q: 'How do I get my family into it?',
+        a: "Start a family, then send people an invite link or let them scan a QR code with their phone's camera. They don't need the app installed first. One link can bring them into your grocery list too. If you belong to several families you can switch between them in Settings."
+    },
+    {
+        q: "What's the difference between my family and my household?",
+        a: "Your household is the people you share groceries with, usually the people at home. Your family is the wider group you share gift lists with. They're separate on purpose, so grandparents can be in the family for gifts and still buy their own groceries."
+    },
+    {
+        q: 'Does the grocery list work in a store with no signal?',
+        a: "Yes. The list still works, and what you tick off saves once you're back online."
+    },
+    {
+        q: 'What is Hosting?',
+        a: "It's off until you switch on Hosting in Settings. Then a third tab appears for big family meals: one guest list for the whole extended family, tables and seating, a menu by course with who is bringing what, and a count of plates, forks and chairs against what you own."
+    },
+    {
+        q: 'Where is my information kept?',
+        a: "On a secure server run by Supabase, because that's how a list gets from your phone to everyone else's. Lists are only visible inside the family or household you joined by invite. We don't sell it, there are no ads, and crash reports go to Sentry so we can fix bugs. The Privacy Policy has the full detail."
+    },
+    {
+        q: 'How do I delete my account?',
+        a: 'In the app, open Settings from the menu button, scroll to the bottom and tap Delete account. It removes your account, wish lists, private gift ideas and profile photo straight away. There is a step-by-step page at artificialigknorance.com/family-lists/delete-account.'
+    },
+    {
+        q: 'What do I need to run it?',
+        a: 'iPhone and iPad need iOS 16.4 or later, and on iPhone you can put the grocery list on your Home Screen with a widget. On Android, get it from Google Play.'
+    }
+];
+
+const shots = [
+    { file: 'groceries', title: 'Groceries', text: 'Everyone in the household adds to one list and ticks things off as they shop.', alt: 'Family Lists Groceries tab: a To buy list with dish soap, oat milk, chicken thighs, apples, sourdough bread, eggs and milk, each tinted by who added it, and coffee beans already in the cart' },
+    { file: 'gifts', title: 'Gifts', text: 'Everyone in the family keeps a wish list. Yours never shows what was bought.', alt: 'Family Lists Gifts tab: your own wish list and two family wish lists with item counts, a History button, and a Blabbermouth Mode badge on one person' },
+    { file: 'wish-list', title: 'A wish list', text: 'Private ideas and lists that only you can see.', alt: "Family Lists wish list screen: running shoes with size and price, a list of stocking stuffers made just for you, and a private ideas section only you can see" },
+    { file: 'hosting-guests', title: 'Guest list', text: 'Parties, children and high chairs, counted separately.', alt: 'Family Lists Christmas Dinner guest list: 4 adults, 2 children, 6 people in total, guests grouped into parties with who is bringing a dish' },
+    { file: 'hosting-menu', title: 'Menu', text: 'Mains, sides and desserts, and who is making each one.', alt: 'Family Lists Christmas Dinner menu: mains, sides and desserts, with who is bringing each dish and one dish nobody has picked yet' },
+    { file: 'hosting-supplies', title: 'Supplies', text: 'Plates, forks and chairs against what you own.', alt: 'Family Lists Christmas Dinner supplies: plates 6 of 12, forks 6 of 20, chairs 5 of 8, and one high chair still needed' }
+];
+
+const pageStructuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+        {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
+                { '@type': 'ListItem', position: 2, name: 'Family Lists', item: SITE_URL + '/family-lists/' }
+            ]
+        },
+        {
+            '@type': 'FAQPage',
+            mainEntity: faqs.map(({ q, a }) => ({
+                '@type': 'Question',
+                name: q,
+                acceptedAnswer: { '@type': 'Answer', text: a }
+            }))
+        }
+    ]
+};
+---
+
+<Layout
+    title="Family Lists | Shared Grocery List, Gift Lists and Dinner Planner"
+    description="Family Lists is a free grocery list your household shares, gift wish lists where nobody spoils the surprise, and a planner for big family dinners. iPhone, iPad and Android. No ads."
+    ogImage={APP_ICON}
+    twitterCard="summary_large_image"
+    smartAppId="6813696329"
+    datePublished="2026-11-14"
+    mainEntityId={SITE_URL + "/#family-lists"}
+>
+    <script slot="head" type="application/ld+json" set:html={JSON.stringify(pageStructuredData)} />
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="text-sm text-muted pt-6">
+        <ol class="flex items-center gap-2">
+            <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-body">Family Lists</li>
+        </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative py-12 sm:py-16">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-teal-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-emerald-400 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row md:flex-wrap md:justify-center items-center gap-8 md:gap-12">
+            <img src={APP_ICON} alt="Family Lists app icon: a teal checklist clipboard held between white silhouettes of a family" width="180" height="180" class="w-32 h-32 md:w-44 md:h-44 rounded-3xl shadow-2xl flex-shrink-0" />
+            <div class="flex-1 max-w-full text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl font-bold mb-3 text-ink">
+                    Family Lists
+                </h1>
+                <p class="text-xl sm:text-2xl text-teal-700 font-medium mb-4">Groceries, gifts, and the big family dinner.</p>
+                <p class="text-body max-w-2xl mb-6 text-lg">
+                    A grocery list your household shares. Gift lists where nobody spoils the surprise. And a planner
+                    for the dinner where twenty-two people turn up. Free, no ads, on iPhone, iPad and Android.
+                </p>
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+                    <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" class="inline-block transition-transform duration-200 hover:scale-105" aria-label="Download on the App Store"><img src="/images/appstore-badge.svg" alt="Download on the App Store" class="h-14 w-auto" loading="lazy" /></a>
+                    <a href={PLAY_URL} target="_blank" rel="noopener noreferrer" class="inline-block transition-transform duration-200 hover:scale-105" aria-label="Get it on Google Play"><img src="/images/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" class="h-14 w-auto" loading="lazy" /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick badges -->
+    <section class="flex flex-wrap gap-2 justify-center md:justify-start mb-12">
+        <span class="px-3 py-1 bg-teal-500/20 text-teal-800 rounded-full text-sm">iPhone, iPad &amp; Android</span>
+        <span class="px-3 py-1 bg-teal-500/20 text-teal-800 rounded-full text-sm">Free, no ads</span>
+        <span class="px-3 py-1 bg-teal-500/20 text-teal-800 rounded-full text-sm">Shared grocery list</span>
+        <span class="px-3 py-1 bg-teal-500/20 text-teal-800 rounded-full text-sm">Secret gift lists</span>
+        <span class="px-3 py-1 bg-teal-500/20 text-teal-800 rounded-full text-sm">Dinner planner</span>
+        <span class="px-3 py-1 bg-teal-500/20 text-teal-800 rounded-full text-sm">Works with no signal</span>
+        <span class="px-3 py-1 bg-teal-500/20 text-teal-800 rounded-full text-sm">Face ID lock</span>
+    </section>
+
+    <!-- What it does -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center md:text-left">What it does</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-teal-700">A grocery list everyone shares</h3>
+                <p class="text-body">Add milk on the couch and it shows up on the phone of whoever's at the store a second later. Things you buy often turn into one-tap quick picks. Add something you've bought before and it comes back with its quantity, store, note and photo already filled in.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-teal-700">Made for standing in the aisle</h3>
+                <p class="text-body">Give items a category or a store and sort either way, or by who added them. The app learns where you usually buy each thing. Filter down to one store when you're standing in it. No signal? The list still works, and ticks save when you're back online. On iPhone you can put it on your Home Screen with a widget.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-teal-700">Gift lists with no spoilers</h3>
+                <p class="text-body">Each person keeps a wish list the family can see. When Mom buys something off Jim's list she marks it bought, and Dad and Sally see it's taken so nobody doubles up. Jim never does. What has or hasn't been bought from your own list stays hidden from you, always.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-teal-700">Press and hold to mark bought</h3>
+                <p class="text-body">A stray tap in front of the wrong person gives nothing away. Want more than one of something? Ask for 5 packs of Pokémon cards and each person picks how many they're getting.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-teal-700">Private notes and ideas</h3>
+                <p class="text-body">Bought something? Leave yourself a note on it, like where it's hidden, and a tag like Christmas. Keep private gift ideas for someone, or a private list only one person sees, like stocking stuffers for your partner. The person it's for never sees any of it. Gift History keeps a record of everything you've bought.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-teal-700">Blabbermouth Mode</h3>
+                <p class="text-body">If someone in the family can't keep a secret, turn this on for them and pick whose lists they can't see purchases on. They can still add and buy gifts. They just can't spoil the surprises. You can even keep it secret from them.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-teal-700">Hosting</h3>
+                <p class="text-body">Hosting Christmas dinner for 22? Switch on Hosting in Settings for a third tab. Keep one guest list for the whole extended family, grouped into parties, with children and high chairs counted separately. Set up tables and pick who sits where. Plan the menu by course and hand dishes out, so you know who's bringing the potatoes and which dish is still nobody's job.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-teal-700">Start from last year</h3>
+                <p class="text-body">Next year, begin from last year's dinner. The guest list, tables and menu come with it, along with the note you left yourself about running out of gravy. The app also adds up the plates, forks, chairs and wine glasses you'll need against what you own.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-teal-700">Household and family, kept apart</h3>
+                <p class="text-body">Your household is its own group, separate from the wider family. Grandparents can be family for gifts and still buy their own groceries. A household admin picks who can make changes, and everyone else can look without editing anything.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-teal-700">Easy in, easy to lock</h3>
+                <p class="text-body">Sign in with Apple or a secure emailed code, no password to remember. Send people an invite link or let them scan a QR code. Lock the app with Face ID if you like, and choose day or night.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- See it in action -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-3 text-center md:text-left">See it in action</h2>
+        <p class="text-muted mb-8 text-center md:text-left text-sm">Real screens from the App Store. (Sample data shown.)</p>
+
+        <!-- Mobile: horizontal snap-scroll. Desktop: 2-column / 3-column grid. -->
+        <div class="flex snap-x snap-mandatory overflow-x-auto gap-4 -mx-6 px-6 pb-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible lg:grid-cols-3">
+            {shots.map((s) => (
+                <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
+                    <picture><source srcset={`/images/screenshots/family-lists/${s.file}.webp`} type="image/webp" /><img
+                        src={`/images/screenshots/family-lists/${s.file}.jpg`}
+                        alt={s.alt}
+                        width="800"
+                        height="1738"
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full rounded-2xl shadow-xl border border-line"
+                    /></picture>
+                    <figcaption class="mt-3 text-teal-700 font-semibold text-sm">{s.title}</figcaption>
+                    <p class="text-xs text-muted mt-1">{s.text}</p>
+                </figure>
+            ))}
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center md:text-left">Frequently asked questions</h2>
+        <div class="space-y-3">
+            {faqs.map(({ q, a }) => (
+                <details class="p-5 transition-all bg-white border border-line rounded-2xl group hover:shadow-md">
+                    <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-lg">
+                        <span>{q}</span>
+                        <svg class="flex-shrink-0 w-8 h-8 p-1.5 transition-transform duration-300 rounded-full bg-[#efeff2] text-muted group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <p class="mt-3 text-body">{a}</p>
+                </details>
+            ))}
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="text-center mb-16 bg-gradient-to-br from-teal-500/15 to-emerald-500/15 rounded-3xl p-8 md:p-12 border border-teal-400/20">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get Family Lists</h2>
+        <p class="text-body text-lg mb-8 max-w-2xl mx-auto">Free, with no ads. On iPhone, iPad and Android.</p>
+        <div class="flex flex-wrap gap-3 justify-center">
+            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" class="inline-block transition-transform duration-200 hover:scale-105" aria-label="Download on the App Store"><img src="/images/appstore-badge.svg" alt="Download on the App Store" class="h-14 w-auto" loading="lazy" /></a>
+            <a href={PLAY_URL} target="_blank" rel="noopener noreferrer" class="inline-block transition-transform duration-200 hover:scale-105" aria-label="Get it on Google Play"><img src="/images/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" class="h-14 w-auto" loading="lazy" /></a>
+        </div>
+        <p class="mt-6 text-sm text-muted">Got an invite link from family? <a href="https://lists.artificialigknorance.com" target="_blank" rel="noopener noreferrer" class="text-teal-700 hover:text-teal-900 underline">lists.artificialigknorance.com</a> walks you through it. Or browse <a href="/" class="text-teal-700 hover:text-teal-900 underline">all Artificial Igknorance apps</a>.</p>
+    </section>
+</Layout>

@@ -1,0 +1,230 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const SITE_URL = 'https://artificialigknorance.com';
+const APP_STORE_URL = 'https://apps.apple.com/us/app/junkyard-titans/id6826464717';
+const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.artificialigknorance.junkyardtitans';
+const APP_ICON = '/images/junkyard-titans-icon.webp';
+
+const faqs = [
+    {
+        q: 'What is Junkyard Titans?',
+        a: 'A free block puzzle where every line you crush pays out in robot parts, and the robots you build fight. You drag scrap onto an 8 by 8 grid, crack open crates, boot up robots, then take them into the Arena. It runs on iPhone, iPad and Android.'
+    },
+    {
+        q: 'Is it free? Are there ads?',
+        a: "Free to download and free to play, with no ads. The optional purchases are mostly about looks: shirts, some masks, battle banners, junkyard photo walls, meme floors and signs. The Overclock Chip is the exception. You can buy one a day and it adds 3 levels to a part. Crates, bolts and claw drops can't be bought with real money."
+    },
+    {
+        q: 'Do I need an account?',
+        a: "No. There's no sign-up, no email and no password. The game makes up a random ID on your device and builds your player name from two word lists, so you can't type your own. Your progress is saved on your device, and on iPhone it also backs up to your own iCloud."
+    },
+    {
+        q: 'How do friends and trading work?',
+        a: "You add a friend with their 6-character code. After that you can trade spare parts, clothes, banners, decorations, resources, crates and even bolts to even out a deal. You can also post a wish list, send a gift or fight a friend live. Items you paid real money for can only be given as gifts, not traded. There's no chat."
+    },
+    {
+        q: 'Is it safe for kids?',
+        a: "It's rated 12+ on the App Store. Names are made by the game from fixed word lists, so nobody can type their own and there's nothing to say to anyone. There's no chat at all. The nearby Leaders board never shows anyone's location."
+    },
+    {
+        q: 'What is the Leaders board, and what does it show about me?',
+        a: "It's optional. If you join, the game uses your approximate location, rounded to about 1 km, to rank you against players nearby. That location is never shown to anyone. Other players can tap your name to see your game numbers (crates opened, lines crushed, best run, Arena wins and losses) and how your ScrapBot looks. Leaving the board deletes your entry."
+    },
+    {
+        q: 'What does the game keep about me?',
+        a: 'Your random game ID, your game-made name, your progress and what you own sit on our server so friends and trading work. Crash reports go to Sentry, a service that helps us find bugs. None of it is used for ads or sold. Erase all game data in Settings removes your progress from your phone and iCloud, and your game ID and everything tied to it from our server. The full detail is in the Privacy Policy.'
+    },
+    {
+        q: 'Will it run on my phone?',
+        a: 'iPhone and iPad need iOS 17 or later. On Android, get it from Google Play.'
+    }
+];
+
+const shots = [
+    { file: 'crusher', title: 'The Crusher', text: 'Drag scrap onto the grid. Fill a row or a column and it gets crushed.', alt: 'Junkyard Titans crusher: an 8 by 8 grid of colored scrap blocks, 31 lines crushed, best run 38, with Brick, Bomb, Rotate and Stash helpers along the bottom' },
+    { file: 'crates', title: 'Crack a crate', text: 'Three parts fall out. The bright yellow Prototype is the one you want.', alt: 'Junkyard Titans crate screen: three robot parts fall out of an opened crate and a yellow Prototype power core is found, with 2 crates left and a Next Crate button' },
+    { file: 'robots', title: 'Blueprints', text: 'Fill all six slots and the robot boots up.', alt: 'Junkyard Titans Robots tab: blueprint pages for two robots, each with six part slots and a button to boot it up, under a neon Junkyard Titans sign' },
+    { file: 'arena', title: 'The Arena', text: 'Pick ATTACK, GUARD or a special move every round.', alt: 'Junkyard Titans Arena fight: two pixel-art robots face off with green health bars, round 1, and ATTACK and GUARD buttons' },
+    { file: 'binder', title: 'The Binder', text: 'Every part is a card. Doubles stack, and you can search.', alt: 'Junkyard Titans Binder: a grid of robot part trading cards sorted rarest first, 61 of 200 collected' },
+    { file: 'trading', title: 'Friends and trades', text: 'Accept an offer, counter it, or say no thanks.', alt: 'Junkyard Titans Arena Friends tab: a trade offer from another player with Accept, Counter and No thanks buttons, and an invite box for new players' },
+    { file: 'warehouse', title: 'The warehouse', text: 'Furniture on display gives you a small perk.', alt: 'Junkyard Titans Warehouse: a pixel-art room with a jukebox, a pinball machine and robots on display, and a list of prototype machines that each give a small perk' }
+];
+
+const pageStructuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+        {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
+                { '@type': 'ListItem', position: 2, name: 'Junkyard Titans', item: SITE_URL + '/junkyard-titans/' }
+            ]
+        },
+        {
+            '@type': 'FAQPage',
+            mainEntity: faqs.map(({ q, a }) => ({
+                '@type': 'Question',
+                name: q,
+                acceptedAnswer: { '@type': 'Answer', text: a }
+            }))
+        }
+    ]
+};
+---
+
+<Layout
+    title="Junkyard Titans | Block Puzzle and Robot Battle Game"
+    description="Junkyard Titans is a free block puzzle where crushed lines pay out robot parts. Build robots, trade with friends, fight in the Arena. No ads. iPhone, iPad and Android."
+    ogImage={APP_ICON}
+    twitterCard="summary_large_image"
+    smartAppId="6826464717"
+    datePublished="2026-11-14"
+    mainEntityId={SITE_URL + "/#junkyard-titans"}
+>
+    <script slot="head" type="application/ld+json" set:html={JSON.stringify(pageStructuredData)} />
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="text-sm text-muted pt-6">
+        <ol class="flex items-center gap-2">
+            <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-body">Junkyard Titans</li>
+        </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative py-12 sm:py-16">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-amber-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-orange-400 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row md:flex-wrap md:justify-center items-center gap-8 md:gap-12">
+            <img src={APP_ICON} alt="Junkyard Titans app icon: a crowned pixel-art robot with a glowing core, surrounded by scrap blocks" width="180" height="180" class="w-32 h-32 md:w-44 md:h-44 rounded-3xl shadow-2xl flex-shrink-0" />
+            <div class="flex-1 max-w-full text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl font-bold mb-3 text-ink">
+                    Junkyard Titans
+                </h1>
+                <p class="text-xl sm:text-2xl text-amber-700 font-medium mb-4">Crush lines. Build robots. Take them to the Arena.</p>
+                <p class="text-body max-w-2xl mb-6 text-lg">
+                    A block puzzle where every line you crush pays out in robot parts, and the robots you build fight.
+                    Drag scrap onto the grid, crack open crates, boot up your robots, then send them up 20 rungs of
+                    a rich kid's crew. Free, no ads, on iPhone, iPad and Android.
+                </p>
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+                    <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" class="inline-block transition-transform duration-200 hover:scale-105" aria-label="Download on the App Store"><img src="/images/appstore-badge.svg" alt="Download on the App Store" class="h-14 w-auto" loading="lazy" /></a>
+                    <a href={PLAY_URL} target="_blank" rel="noopener noreferrer" class="inline-block transition-transform duration-200 hover:scale-105" aria-label="Get it on Google Play"><img src="/images/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" class="h-14 w-auto" loading="lazy" /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick badges -->
+    <section class="flex flex-wrap gap-2 justify-center md:justify-start mb-12">
+        <span class="px-3 py-1 bg-amber-500/20 text-amber-800 rounded-full text-sm">iPhone, iPad &amp; Android</span>
+        <span class="px-3 py-1 bg-amber-500/20 text-amber-800 rounded-full text-sm">Free to play</span>
+        <span class="px-3 py-1 bg-amber-500/20 text-amber-800 rounded-full text-sm">No ads</span>
+        <span class="px-3 py-1 bg-amber-500/20 text-amber-800 rounded-full text-sm">No account</span>
+        <span class="px-3 py-1 bg-amber-500/20 text-amber-800 rounded-full text-sm">Trade with friends</span>
+        <span class="px-3 py-1 bg-amber-500/20 text-amber-800 rounded-full text-sm">No chat</span>
+        <span class="px-3 py-1 bg-amber-500/20 text-amber-800 rounded-full text-sm">Rated 12+</span>
+    </section>
+
+    <!-- What it does -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center md:text-left">What you do in it</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-amber-700">Crush lines</h3>
+                <p class="text-body">Drag chunks of scrap onto an 8 by 8 grid. Fill a row or a column and the crusher flattens it. Keep crushing with piece after piece and the streak bonus climbs. Later in a run some blocks are rusted and take two hits.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-amber-700">Crack open crates</h3>
+                <p class="text-body">Every 10 lines fills a crate, and a crate gives you three parts: heads, arms, legs, bodies and power cores. Most are Scrap. Salvage and Chrome turn up less often, and Polished Titanium is rare. Once in a long while you get a Prototype, a bright yellow part with its own ability.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-amber-700">Build robots</h3>
+                <p class="text-body">Fill all six slots on a blueprint page and the robot boots up. There are nine to build in the first junkyard, from Scrapjaw (half of a 1987 pickup truck) to HankBot, a golden retriever who fetches bolts. Melt spares into bolts, upgrade the parts you love, or combine three into a rarer one.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-amber-700">Fight in the Arena</h3>
+                <p class="text-body">Climb 20 rungs of Preston Shine's crew. He's the rich kid on the hill who dumps last week's bot in your junkyard, and he has opinions about yours. Each round you pick ATTACK, GUARD or a special move. Boot all nine robots and they combine into a Junkyard Titan. Beat his solid gold GOLDEN BOY and the next junkyard opens.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-amber-700">Friends and trading</h3>
+                <p class="text-body">Add friends with a code and trade almost anything: spare parts, clothes, banners, decorations, resources, crates, even bolts to even out a deal. Post a wish list, send a gift, or fight a friend live. Player names are made by the game, and there's no chat.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-amber-700">The Binder</h3>
+                <p class="text-body">Every part, shirt, crate and supply is a trading card. The Binder tab keeps your whole collection in one place, with doubles stacked and a search box to find any card.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-amber-700">Scavenging and the market</h3>
+                <p class="text-body">Send your robots out scavenging and they come back hours later with scrap steel, springs, glass, rare circuit boards and more. Sell spares on the SCRAP 500, a junkyard market where prices move every day, so it pays to sell when they're up. Every yard is rich in two resources and short of two others, which is what friends are for.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-amber-700">Puzzles when you don't want a fight</h3>
+                <p class="text-body">Nut Sort and Tow Out have no daily limit. The Daily Puzzle hands you one board and a fixed set of pieces. The Scrap Claw gives you five free drops a day and shows you the odds. Three Daily Jobs pay a crate each, a broken robot gets dumped at the gate every day for you to rewire, and there are 28 achievements to chase.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 hover:shadow-md transition-all border border-line">
+                <h3 class="text-xl font-bold mb-2 text-amber-700">Warehouse, pet and wardrobe</h3>
+                <p class="text-body">Buy a warehouse behind the Garage and fill it with furniture that gives small perks, from a jukebox to an arcade machine with its own shooter. Win a mechanical egg in the third junkyard and in the fourth it hatches into a robot pet you name, feed and play with. Dress your ScrapBot in shirts, boots, masks and 23 hats, most of them earned by playing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- See it in action -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-3 text-center md:text-left">See it in action</h2>
+        <p class="text-muted mb-8 text-center md:text-left text-sm">Real screens from the App Store.</p>
+
+        <!-- Mobile: horizontal snap-scroll. Desktop: 2-column / 3-column grid. -->
+        <div class="flex snap-x snap-mandatory overflow-x-auto gap-4 -mx-6 px-6 pb-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible lg:grid-cols-3">
+            {shots.map((s) => (
+                <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
+                    <picture><source srcset={`/images/screenshots/junkyard-titans/${s.file}.webp`} type="image/webp" /><img
+                        src={`/images/screenshots/junkyard-titans/${s.file}.jpg`}
+                        alt={s.alt}
+                        width="800"
+                        height="1738"
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full rounded-2xl shadow-xl border border-line"
+                    /></picture>
+                    <figcaption class="mt-3 text-amber-700 font-semibold text-sm">{s.title}</figcaption>
+                    <p class="text-xs text-muted mt-1">{s.text}</p>
+                </figure>
+            ))}
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center md:text-left">Frequently asked questions</h2>
+        <div class="space-y-3">
+            {faqs.map(({ q, a }) => (
+                <details class="p-5 transition-all bg-white border border-line rounded-2xl group hover:shadow-md">
+                    <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-lg">
+                        <span>{q}</span>
+                        <svg class="flex-shrink-0 w-8 h-8 p-1.5 transition-transform duration-300 rounded-full bg-[#efeff2] text-muted group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <p class="mt-3 text-body">{a}</p>
+                </details>
+            ))}
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="text-center mb-16 bg-gradient-to-br from-amber-500/15 to-orange-500/15 rounded-3xl p-8 md:p-12 border border-amber-400/20">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get Junkyard Titans</h2>
+        <p class="text-body text-lg mb-8 max-w-2xl mx-auto">Free, with no ads. On iPhone, iPad and Android.</p>
+        <div class="flex flex-wrap gap-3 justify-center">
+            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" class="inline-block transition-transform duration-200 hover:scale-105" aria-label="Download on the App Store"><img src="/images/appstore-badge.svg" alt="Download on the App Store" class="h-14 w-auto" loading="lazy" /></a>
+            <a href={PLAY_URL} target="_blank" rel="noopener noreferrer" class="inline-block transition-transform duration-200 hover:scale-105" aria-label="Get it on Google Play"><img src="/images/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" class="h-14 w-auto" loading="lazy" /></a>
+        </div>
+        <p class="mt-6 text-sm text-muted">Or browse <a href="/" class="text-amber-700 hover:text-amber-900 underline">all Artificial Igknorance apps</a>.</p>
+    </section>
+</Layout>

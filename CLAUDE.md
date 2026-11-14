@@ -24,7 +24,8 @@ Live at https://artificialigknorance.com.
   `snapledger.astro`, `gold-watcher.astro`, `silver-watcher.astro`,
   `copper-watcher.astro`, `lithium-watcher.astro`, `ridgepacker.astro`,
   `elevator-code-answers.astro` (SEO landing page targeting A17.1/A17.2/
-  A17.3/B44 search terms, funnels to Escalator Field Command), `about.astro`,
+  A17.3/B44 search terms, funnels to Escalator Field Command),
+  `family-lists/index.astro`, `junkyard-titans.astro`, `about.astro`,
   `privacy.astro`, `terms.astro`, and `family-lists/delete-account.astro`
   (account-deletion page for the Family Lists app). The Astro starter demo pages (`blobs/`,
   `edge/`, `image-cdn/`, `revalidation/`, `api/`) are inherited and
@@ -72,16 +73,20 @@ Live at https://artificialigknorance.com.
 | Silver Watcher (Ag) | 6760270695 | us | slate | shipping |
 | Lithium Watcher (Li) | 6761344726 | us | teal | shipping |
 | RidgePacker | 6766699306 | us | sky | shipping |
+| Family Lists | 6813696329 | us | teal | shipping (also Google Play) |
+| Junkyard Titans | 6826464717 | us | amber | shipping (also Google Play) |
 
-Currently 9 apps. The count appears on the homepage proof strip ("9 apps,
-all free to download") and on the `/about/` page ("Nine apps live on the
-App Store today, across seven areas" and "All nine apps are free to
-download"). Update those whenever the catalog changes.
+Currently 11 apps. The count appears on the homepage proof strip ("11 apps,
+all free to download" and "10 of 11 apps need no account") and on the
+`/about/` page ("Eleven apps live on the App Store today, across nine
+areas" and "All eleven apps are free to download. Ten of them need no
+account"). Update those whenever the catalog changes. Only Family Lists
+needs an account, so never write "no accounts" for the whole brand.
 
 Homepage layout (Daylight): hero + proof strip, then a dark featured band
 for Escalator Field Command (always first, SEO priority), then "For
 everyday life" (HealthTrail Medical, Clock-In Everyday, RidgePacker,
-SnapLedger as a 2x2 grid of tiles), then "The Watchers" (Gold, Silver,
+SnapLedger, Family Lists, Junkyard Titans as a 2x3 grid of tiles), then "The Watchers" (Gold, Silver,
 Copper, Lithium as a row of four). The tiles are driven by the `everyday`
 and `watchers` arrays at the top of `index.astro`: adding an app means
 adding an entry there (plus its screenshots in `public/images/home/`).
@@ -113,12 +118,13 @@ Old anchors still exist: `#apps`, `#industry`, `#health`, `#financial`,
   Escalator Field Command walkthrough, swap it in there.
 - **App Store buttons use Apple's official badge SVG**, never styled
   gradient buttons.
-- **Homepage app tiles** show the official App Store badge (`h-10`) plus a
-  "Details" link, same badge as the app pages. Screenshots on the homepage
+- **Homepage app tiles** show the official App Store badge (`h-10`), the
+  Google Play badge too when the app is on Google Play (set `play` on its
+  entry in `index.astro`), plus a "Details" link. Screenshots on the homepage
   come from `public/images/home/` via `components/Shot.astro` (WebP first,
   JPG fallback, real width/height).
 - **Header and footer** (`Header.astro`, `Footer.astro`) are shared by every
-  page. The header has an "Apps" dropdown listing all nine apps (hover or
+  page. The header has an "Apps" dropdown listing all eleven apps (hover or
   keyboard focus) and a hamburger `<details>` panel on mobile, no JS.
   Every page stays reachable from every page.
 - **All FAQ accordions use the unified pattern**: `<details
@@ -151,16 +157,24 @@ Old anchors still exist: `#apps`, `#industry`, `#health`, `#financial`,
   start date to a database to stop repeat free trials. So never write
   "100% on-device", "never leaves your phone" or "nothing leaves the device"
   for those apps. Say records are stored on the device, and name the scan.
+  Family Lists needs an account (Sign in with Apple or an emailed code) and
+  keeps accounts and shared lists on a Supabase server, with crash reports to
+  Sentry. Junkyard Titans has no account but keeps a random game ID, a game-made
+  name and progress on our Cloudflare server, plus an optional Leaders board
+  with approximate location. Both have their own sections in `privacy.astro`
+  (Sections 5 and 6): keep them in step with the apps.
   Before changing any privacy claim, read the app's relay code
   (`~/Dev/ArtificialIgknorance/<app>/ai-worker` or `cloudflare-worker`). Also,
   OpenAI's own words: API data is not used for training, and may be kept up to
   30 days for abuse checks. Recheck https://developers.openai.com/api/docs/guides/your-data
   now and then.
-- **Android.** Escalator Field Command is the only app with a Google Play
-  listing (`com.vibecode.escalatorfieldcommand`). Everywhere its App Store
-  badge appears (app page, Elevator Code Answers page, homepage featured band,
-  About page) the Google Play badge (`public/images/google-play-badge.png`)
-  sits beside it. Its page says iPhone, iPad and Android, and its JSON-LD
+- **Android.** Three apps have a Google Play listing: Escalator Field Command
+  (`com.vibecode.escalatorfieldcommand`), Family Lists
+  (`com.artificialigknorance.familylists`) and Junkyard Titans
+  (`com.artificialigknorance.junkyardtitans`, live 2026-11, checked 2026-11-14).
+  Everywhere their App Store badge appears (app page, homepage, and for
+  Escalator the Elevator Code Answers and About pages) the Google Play badge
+  (`public/images/google-play-badge.png`) sits beside it, and their JSON-LD
   lists both platforms. Every other app is iOS-only, so their "iOS native"
   tags stay true. Don't claim a free trial on Android until the ledger agrees.
   If Mike confirms another app on Google Play, add its badge the same way.

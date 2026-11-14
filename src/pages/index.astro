@@ -9,16 +9,16 @@ import '../styles/home.css';
 // Overviews. Keep the answers tight: they're rendered verbatim in search.
 const faqs = [
     {
-        q: "Why don't your apps ask me to create an account?",
-        a: "Because the apps don't need your data to work. Everything lives on your iPhone, so there's nothing on our side to leak and nothing for you to remember. You open the app and start using it."
+        q: "Do your apps ask me to create an account?",
+        a: "Almost none do. Most of the apps live on your device, so there's nothing on our side to leak and nothing for you to remember. You open the app and start using it. The exception is Family Lists, which has to know who is in your family so the lists reach their phones. You sign in with Apple or a code we email you, and there's no password."
     },
     {
         q: 'Is my data really private?',
-        a: 'Yes. There are no analytics SDKs, no third-party trackers, no cloud sync and no telemetry. Backing up or exporting is something you trigger yourself, and it goes only where you send it. The two AI features described in the privacy section are the only exceptions.'
+        a: 'Yes. There are no advertising trackers and no third-party analytics, and nothing is sold. Most apps keep everything on your device, and backing up or exporting is something you trigger yourself. The exceptions are the AI features (the Clock-In coach, and photo scanning in HealthTrail Medical and SnapLedger), the shared lists in Family Lists, and the online parts of Junkyard Titans. The privacy section names each one, and the Privacy Policy has the detail.'
     },
     {
         q: 'Are the apps available outside the United States?',
-        a: 'Yes, in most countries. The Watcher apps support 10 or more currencies with live prices. Everything is built for iPhone. Escalator Field Command and RidgePacker also run on iPad, and Escalator Field Command is on Android too.'
+        a: 'Yes, in most countries. The Watcher apps support 10 or more currencies with live prices. Everything is built for iPhone. Escalator Field Command, RidgePacker, Family Lists and Junkyard Titans also run on iPad. Escalator Field Command, Family Lists and Junkyard Titans are on Android too.'
     },
     {
         q: 'What does "Artificial Igknorance" mean?',
@@ -93,6 +93,36 @@ const everyday = [
             ['snap-subs', 'SnapLedger subscriptions screen', 368, 800]
         ],
         desc: 'Take a photo of a bill and the details fill themselves in. Sort subscriptions by category and watch the household total move month to month. No bank login anywhere.'
+    },
+    {
+        id: 'family-lists',
+        name: 'Family Lists',
+        tag: 'Groceries, gifts and dinners',
+        page: '/family-lists/',
+        store: 'https://apps.apple.com/us/app/family-lists/id6813696329',
+        play: 'https://play.google.com/store/apps/details?id=com.artificialigknorance.familylists',
+        icon: 'family-lists',
+        tint: 'lists',
+        shots: [
+            ['fl-groceries', 'Family Lists shared grocery list screen', 640, 1391],
+            ['fl-gifts', 'Family Lists gift wish lists screen', 640, 1391]
+        ],
+        desc: 'A grocery list your household shares, gift lists where nobody spoils the surprise, and a planner for the big family dinner. Free, no ads. iPhone, iPad and Android.'
+    },
+    {
+        id: 'junkyard-titans',
+        name: 'Junkyard Titans',
+        tag: 'Block puzzle and robot battles',
+        page: '/junkyard-titans/',
+        store: 'https://apps.apple.com/us/app/junkyard-titans/id6826464717',
+        play: 'https://play.google.com/store/apps/details?id=com.artificialigknorance.junkyardtitans',
+        icon: 'junkyard-titans',
+        tint: 'junk',
+        shots: [
+            ['jt-crusher', 'Junkyard Titans block puzzle screen', 640, 1391],
+            ['jt-arena', 'Junkyard Titans Arena robot fight screen', 640, 1391]
+        ],
+        desc: 'Every line you crush in this block puzzle pays out in robot parts, and the robots you build fight in the Arena. Trade with friends, collect cards. Free, no ads. iPhone, iPad and Android.'
     }
 ];
 
@@ -147,8 +177,8 @@ const watchers = [
 <Layout
     title="Escalator Field Command: iOS and Android App for Escalator Mechanics | Artificial Igknorance"
     description="Escalator Field Command is an iOS and Android app for escalator mechanics: routes, Category 1 testing, SSPI compliance, inspections. Plus privacy-first apps for health, finance and more by Artificial Igknorance."
-    ogTitle="Artificial Igknorance | Privacy-first iOS apps"
-    ogDescription="Privacy-first iOS apps. No accounts, no cloud, no tracking: everything stays on your iPhone. Tools for health, finance, hiking, and the escalator industry."
+    ogTitle="Artificial Igknorance | Privacy-first apps"
+    ogDescription="Privacy-first apps. No ads, almost no accounts, and your data stays on your phone unless we say otherwise. Tools for health, family, finance, hiking and the escalator industry, plus a robot puzzle game."
     contained={false}
 >
     <link slot="head" rel="preload" as="image" href="/images/home/efc-dashboard.webp" type="image/webp" fetchpriority="high" />
@@ -159,7 +189,7 @@ const watchers = [
         <section class="hero">
             <div class="wrap">
                 <h1>Apps that mind their own business.</h1>
-                <p class="sub">No sign-up, no account, no ads. What you put in lives on your iPhone and stays there.</p>
+                <p class="sub">No ads, almost no accounts. What you put in lives on your phone, and where it doesn't, we say so.</p>
                 <div class="cta">
                     <a class="hbtn" href="#apps">Browse the apps</a>
                     <a class="link" href="#privacy">How we treat your data &#8250;</a>
@@ -172,10 +202,10 @@ const watchers = [
             </div>
             <div class="wrap">
                 <div class="stats">
-                    <div class="stat"><b>0</b><span>accounts to create</span></div>
-                    <div class="stat"><b>0</b><span>trackers inside</span></div>
+                    <div class="stat"><b>10</b><span>of 11 apps need no account</span></div>
+                    <div class="stat"><b>0</b><span>ad trackers inside</span></div>
                     <div class="stat"><b>0</b><span>ads in any app</span></div>
-                    <div class="stat"><b>9</b><span>apps, all free to download</span></div>
+                    <div class="stat"><b>11</b><span>apps, all free to download</span></div>
                 </div>
             </div>
         </section>
@@ -185,7 +215,7 @@ const watchers = [
             <div class="wrap">
                 <div class="sec-head">
                     <h2>Built for the work, not for the data.</h2>
-                    <p>Every app is free to download. Pro upgrades are optional and always start with a free trial.</p>
+                    <p>Every app is free to download. Where there is a Pro upgrade, it is optional and starts with a free trial.</p>
                 </div>
 
                 <div id="industry">
@@ -229,7 +259,7 @@ const watchers = [
                     </article>
                 </div>
 
-                <div class="subhead" id="health"><h3>For everyday life</h3><p>Your health, your family, your gear and your bills.</p></div>
+                <div class="subhead" id="health"><h3>For everyday life</h3><p>Your health, your family, your gear, your bills and your downtime.</p></div>
                 <div class="grid2" style="margin-top:22px">
                     {
                         everyday.map((a) => (
@@ -247,6 +277,9 @@ const watchers = [
                                     <p class="desc">{a.desc}</p>
                                     <div class="actions">
                                         <a class="badge" href={a.store} target="_blank" rel="noopener noreferrer" aria-label={`Download ${a.name} on the App Store`}><img src="/images/appstore-badge.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" /></a>
+                                        {a.play && (
+                                            <a class="badge" href={a.play} target="_blank" rel="noopener noreferrer" aria-label={`Get ${a.name} on Google Play`}><img src="/images/google-play-badge.png" alt="Get it on Google Play" width="134" height="40" loading="lazy" /></a>
+                                        )}
                                         <a class="more" href={a.page}>Details &#8250;</a>
                                     </div>
                                 </div>
@@ -292,15 +325,15 @@ const watchers = [
                     <div class="pgrid">
                         <div class="pitem">
                             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="8" r="4" /><path d="M2.5 20c.6-3.6 3.6-5.5 7.5-5.5 1.6 0 3 .3 4.2.9M17 15l5 5M22 15l-5 5" /></svg>
-                            <h3>No accounts</h3><p>Open the app and start. No email to confirm, no password to forget.</p>
+                            <h3>Hardly any accounts</h3><p>Open the app and start. Only Family Lists asks you to sign in, because its lists have to reach your family's phones.</p>
                         </div>
                         <div class="pitem">
                             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 6.1A10.8 10.8 0 0 1 12 6c5.5 0 9 6 9 6a15 15 0 0 1-3.2 3.8M6.5 7.6C4 9.3 3 12 3 12s3.5 6 9 6c1.3 0 2.5-.3 3.6-.8" /><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" /></svg>
-                            <h3>No tracking</h3><p>No analytics SDKs, no third-party trackers, nothing phoning home.</p>
+                            <h3>No ad tracking</h3><p>No ads, no advertising trackers, no data brokers.</p>
                         </div>
                         <div class="pitem">
                             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5a4 4 0 0 1-.5 9.5H7Z" /><path d="M4 4l16 16" /></svg>
-                            <h3>No cloud sync</h3><p>Your records are stored on your iPhone. Exporting is something you choose to do.</p>
+                            <h3>Mostly on your phone</h3><p>Your records are stored on your device. Exporting is something you choose to do.</p>
                         </div>
                         <div class="pitem">
                             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2.5" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg>
@@ -310,7 +343,7 @@ const watchers = [
                     <div class="fine">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z" /><path d="M12 10v5M12 18v.01" /></svg>
                         <p>
-                            <b>Two exceptions, stated plainly.</b> The AI coach in Clock-In Everyday sends your readiness, goals and notes to a secure server so it can write today's session. Nothing is kept afterward and nothing is tied to an account. Optional AI scanning in HealthTrail Medical and SnapLedger sends the photo or file you chose to an AI provider to read it, and it is not used to train their models. The full detail is in the <a href="/privacy/">Privacy Policy</a>.
+                            <b>The exceptions, stated plainly.</b> The AI coach in Clock-In Everyday sends your readiness, goals and notes to a secure server so it can write today's session. Nothing is kept afterward and nothing is tied to an account. Optional AI scanning in HealthTrail Medical and SnapLedger sends the photo or file you chose to an AI provider to read it, and it is not used to train their models. Family Lists keeps your shared lists on our server, because that's how they reach your family, and only people in your family or household can see them. Junkyard Titans keeps a random game ID, your game-made name and your progress on our server so friends and trading work. The full detail is in the <a href="/privacy/">Privacy Policy</a>.
                         </p>
                     </div>
                 </div>
@@ -333,7 +366,7 @@ const watchers = [
                         Artificial Igknorance is a joke on "artificial intelligence". The smartest software isn't the kind that knows everything about you. It's the kind that stays strategically ignorant, and the misspelling is on purpose.
                     </p>
                     <p>
-                        Every app follows the same rules: your information stays on your phone, and nobody is waiting to monetize it.
+                        Every app follows the same rules: nobody is waiting to monetize your information, and where it has to leave your phone, we say so.
                     </p>
                     <div class="cta" style="justify-content:flex-start"><a class="link" href="/about/">More about the apps and the name &#8250;</a></div>
                 </div>

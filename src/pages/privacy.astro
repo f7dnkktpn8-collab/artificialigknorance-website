@@ -28,22 +28,24 @@ const CONTACT_EMAIL = "info@artificialigknorance.com";
       <section>
         <h2 class="text-xl font-bold text-ink mb-3">Our Privacy Commitment</h2>
         <p class="text-body leading-relaxed">
-          All apps published by {DEVELOPER} are built with a privacy-first philosophy. We do not collect,
-          store, or share your personal data. All information you enter into our apps (including your
-          portfolio holdings, price alerts, health records, and settings) is stored exclusively on your
-          device and never transmitted to our servers, with three exceptions: apps with an AI coaching or
+          All apps published by {DEVELOPER} are built with a privacy-first philosophy. Most of them do not
+          collect, store, or share your personal data. The information you enter into those apps (including
+          your portfolio holdings, price alerts, health records, and settings) is stored exclusively on your
+          device and never transmitted to our servers, with four exceptions: apps with an AI coaching or
           optional AI scanning feature send the relevant context, photo or file to a third-party AI provider
           solely to generate your response (Section 4), apps with a free trial send a scrambled code so a
-          trial cannot be restarted again and again (Section 3), and our game Junkyard Titans keeps some game
-          data on our server so its online features work (Section 5).
+          trial cannot be restarted again and again (Section 3), our game Junkyard Titans keeps some game
+          data on our server so its online features work (Section 5), and our app Family Lists keeps your
+          account and your shared lists on our server so they can reach your family (Section 6).
         </p>
       </section>
 
       <section>
         <h2 class="text-xl font-bold text-ink mb-3">1. Information We Collect</h2>
         <p class="text-body leading-relaxed">
-          We do not collect any personally identifiable information. Our apps do not require you to create
-          an account or provide any personal details.
+          Most of our apps do not collect any personally identifiable information and do not require you to
+          create an account or provide any personal details. Family Lists is the exception: it needs an
+          account (Section 6).
         </p>
         <p class="text-body leading-relaxed mt-3">
           The only data processed by our apps is:
@@ -54,6 +56,7 @@ const CONTACT_EMAIL = "info@artificialigknorance.com";
           <li>For apps with an AI coaching feature, the context needed to generate your personalized plan (see Section 4).</li>
           <li>For apps with optional AI scanning, the photo or file you choose to scan (see Section 4).</li>
           <li>For apps with a free trial, a scrambled code that stops a trial being restarted (see Section 3).</li>
+          <li>For Family Lists, the email address you sign in with, your name and profile photo, and the lists, notes and photos you and your family keep (see Section 6).</li>
           <li>For Junkyard Titans, a random game ID, game progress, whether you're online, a notification address if you allow notifications and, if you join the nearby Leaders board, your approximate location (see Section 5).</li>
         </ul>
       </section>
@@ -63,8 +66,9 @@ const CONTACT_EMAIL = "info@artificialigknorance.com";
         <p class="text-body leading-relaxed">
           All user-generated data is stored locally on your device using iOS secure storage. This includes
           your preferences, settings, portfolio holdings, price alerts, health records, and any other data
-          you enter. This data stays on your device and is not accessible to us, apart from a photo or file you
-          choose to run through AI scanning (Section 4).
+          you enter. In most of our apps this data stays on your device and is not accessible to us. The
+          exceptions are a photo or file you choose to run through AI scanning (Section 4), and the
+          information Junkyard Titans (Section 5) and Family Lists (Section 6) keep on our server.
         </p>
       </section>
 
@@ -168,7 +172,46 @@ const CONTACT_EMAIL = "info@artificialigknorance.com";
       </section>
 
       <section>
-        <h2 class="text-xl font-bold text-ink mb-3">6. Third-Party Services</h2>
+        <h2 class="text-xl font-bold text-ink mb-3">6. Family Lists</h2>
+        <p class="text-body leading-relaxed">
+          Family Lists is a shared app, so it works differently from the rest. It needs an account, and your
+          lists are kept on our server so they can reach everyone in your family. It has no ads. Here is what
+          we keep:
+        </p>
+        <ul class="list-disc list-inside text-body space-y-2 mt-3 ml-4">
+          <li>How you sign in: Sign in with Apple, or a one-time code we email you. We keep the email address you use, or the private relay address Apple gives us if you hide yours, so you can sign in again. There is no password.</li>
+          <li>Your name and, if you add one, your profile photo.</li>
+          <li>Your lists: grocery items (with quantity, store, notes and photos if you add them), wish lists and gift items, private gift ideas, and the notes, tags and bought marks you add to gifts. If you use Hosting, the guest list, tables, menu and supplies for a dinner.</li>
+          <li>Which family and household you belong to, and whether you are an admin.</li>
+        </ul>
+        <p class="text-body leading-relaxed mt-3">
+          Only people in the family or household you joined by invite can see your lists. What has been
+          bought from a gift list is hidden from the person who owns that list, and our server enforces this,
+          not just the app. Your private ideas, notes and tags are visible only to you, unless you choose to
+          share a note with your spouse.
+        </p>
+        <p class="text-body leading-relaxed mt-3">
+          The data is stored with Supabase, our database and sign-in provider, on servers in the United
+          States. The emailed sign-in codes are sent through Google's Gmail. Sign in with Apple is run by
+          Apple. If the app crashes, a crash report goes to Sentry. See
+          <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer"
+            class="text-accent hover:text-accent-deep underline">Supabase's Privacy Policy</a> and
+          <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer"
+            class="text-accent hover:text-accent-deep underline">Sentry's Privacy Policy</a>.
+          We don't sell any of it, and it is not used for advertising or to track you across other apps. The
+          optional Face ID lock works on your device only, and we never receive your face data or passcode.
+        </p>
+        <p class="text-body leading-relaxed mt-3">
+          To delete it all, open Settings in the app, scroll to the bottom and tap Delete account. That removes
+          your account, your wish lists, your private gift ideas and your profile photo straight away, along
+          with the items you added to a shared grocery list. If you can't get into the app, email us and we
+          will do it for you. The steps are also on our
+          <a href="/family-lists/delete-account/" class="text-accent hover:text-accent-deep underline">delete account page</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-ink mb-3">7. Third-Party Services</h2>
         <p class="text-body leading-relaxed">
           Our apps may use the following third-party services depending on the app:
         </p>
@@ -179,13 +222,15 @@ const CONTACT_EMAIL = "info@artificialigknorance.com";
           <li><strong class="text-ink">Anthropic (Claude)</strong>: for AI coaching features where applicable. See Section 4 above.</li>
           <li><strong class="text-ink">OpenAI</strong>: for optional AI scanning where applicable. See Section 4 above.</li>
           <li><strong class="text-ink">Cloudflare</strong>: runs the secure relay that passes AI requests along, the free-trial check and the Junkyard Titans game server. See Sections 3, 4 and 5 above.</li>
-          <li><strong class="text-ink">Sentry</strong>: for crash reports in Junkyard Titans. See Section 5 above.</li>
+          <li><strong class="text-ink">Sentry</strong>: for crash reports in Junkyard Titans and Family Lists. See Sections 5 and 6 above.</li>
+          <li><strong class="text-ink">Supabase</strong>: the database and sign-in service behind Family Lists. See Section 6 above.</li>
+          <li><strong class="text-ink">Google (Gmail)</strong>: sends the one-time sign-in codes for Family Lists. See Section 6 above.</li>
           <li><strong class="text-ink">Apple Push Notification Service</strong>: for local notifications. Notifications are scheduled locally on your device and do not pass through our servers.</li>
         </ul>
       </section>
 
       <section>
-        <h2 class="text-xl font-bold text-ink mb-3">7. Children's Privacy</h2>
+        <h2 class="text-xl font-bold text-ink mb-3">8. Children's Privacy</h2>
         <p class="text-body leading-relaxed">
           Our apps are not directed at children under the age of 13. We do not knowingly collect personal
           information from children. If you believe a child has provided personal information through one
@@ -194,9 +239,9 @@ const CONTACT_EMAIL = "info@artificialigknorance.com";
       </section>
 
       <section>
-        <h2 class="text-xl font-bold text-ink mb-3">8. Data Security</h2>
+        <h2 class="text-xl font-bold text-ink mb-3">9. Data Security</h2>
         <p class="text-body leading-relaxed">
-          Because user data is stored locally on your device (apart from the game data in Section 5), it is protected by your device's
+          Because user data is stored locally on your device (apart from the game data in Section 5 and the Family Lists data in Section 6), it is protected by your device's
           built-in security features, including device encryption and Face ID/Touch ID where applicable.
           We recommend keeping your device's operating system up to date to benefit from the latest
           security improvements.
@@ -204,7 +249,7 @@ const CONTACT_EMAIL = "info@artificialigknorance.com";
       </section>
 
       <section>
-        <h2 class="text-xl font-bold text-ink mb-3">9. Changes to This Policy</h2>
+        <h2 class="text-xl font-bold text-ink mb-3">10. Changes to This Policy</h2>
         <p class="text-body leading-relaxed">
           We may update this Privacy Policy from time to time. We will notify you of material changes by
           updating the "Last updated" date at the top of this policy. Your continued use of our apps
@@ -213,11 +258,12 @@ const CONTACT_EMAIL = "info@artificialigknorance.com";
       </section>
 
       <section>
-        <h2 class="text-xl font-bold text-ink mb-3">10. Your Rights</h2>
+        <h2 class="text-xl font-bold text-ink mb-3">11. Your Rights</h2>
         <p class="text-body leading-relaxed">
-          Apart from the Junkyard Titans game data in Section 5, which you can erase from inside the game, we do
-          not collect or store your personal data on our servers, so there is no personal data for us to
-          provide, correct, or delete on your behalf. You can delete all locally stored app
+          Apart from the Junkyard Titans game data in Section 5 and the Family Lists account and lists in
+          Section 6, which you can erase from inside those apps, we do not collect or store your personal data
+          on our servers, so there is no personal data for us to provide, correct, or delete on your behalf.
+          You can delete all locally stored app
           data at any time by uninstalling the app from your device. Data sent to an AI feature
           (Section 4) is not retained by us after your request is answered, so there is nothing to delete
           there. The scrambled free-trial code (Section 3) is not linked to you, but if you would like it
@@ -264,7 +310,7 @@ const CONTACT_EMAIL = "info@artificialigknorance.com";
       </section>
 
       <section>
-        <h2 class="text-xl font-bold text-ink mb-3">11. Contact Us</h2>
+        <h2 class="text-xl font-bold text-ink mb-3">12. Contact Us</h2>
         <p class="text-body leading-relaxed">
           If you have any questions or concerns about this Privacy Policy, please contact us:
         </p>
