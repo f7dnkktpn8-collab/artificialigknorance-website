@@ -8,7 +8,7 @@ Live at https://artificialigknorance.com.
 
 - **Astro** + Tailwind (via `src/styles/globals.css`), Inter Variable font
 - Deployed to **Netlify** on push to `main`
-  (repo: `github.com/f7dnkktpn8-collab/astro-platform-starter`)
+  (repo: `github.com/f7dnkktpn8-collab/artificialigknorance-website (renamed 2026-11-14, was astro-platform-starter)`)
 - **Domain `artificialigknorance.com`:** registered at **GoDaddy**, but
   DNS is delegated to **Netlify** (NS1 nameservers `DNS{1-4}.P06.NSONE.NET`).
   So the domain bill is at GoDaddy; the DNS records that point the site
