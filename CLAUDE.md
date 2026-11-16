@@ -254,48 +254,58 @@ base URL to fetch at full resolution. The iTunes Search API's
 
 ## Current Session State
 
-Last updated: 2026-10-12: Everything asked for today is live (`48a1942`):
-screen-size fixes, Google Play links, privacy wording, the Brazil (LGPD)
-privacy section, corrected metals app prices and trial wording, and Gold Watcher's Lifetime plan.
+Last updated: 2026-11-16: Junkyard Titans and Family Lists are on the site
+(own pages, homepage tiles, menus, About, privacy Section 6), live as `7e82312`.
 Nothing in flight.
 
 **Current focus:** None. No branches or work copies are open.
 
 **Last shipped:** the website is static, so "shipped" = pushed to `main` and
-Netlify auto-deploys. `origin/main` is `48a1942`, verified live 2026-10-12
-(pages 200, no em dashes, Brazil section and ANPD note on `/privacy/`, the
-four metals pages show $1.99 a month and $9.99 a year with no stale prices,
-Gold shows the $24.99 Lifetime plan, and all four show the right free trial: 3 days on both plans for Gold and Silver, 7 days on both plans for Copper and Lithium, checked in App Store Connect). Use `https://artificialigknorance.com`
-with `curl -L` when checking live, because `www.` redirects.
+Netlify auto-deploys. `origin/main` is `7e82312`, verified live 2026-11-16
+(home, `/junkyard-titans/`, `/family-lists/`, `/privacy/`, `/about/` all 200, no em dashes,
+both new pages carry App Store and Google Play links, homepage shows six
+everyday tiles with Play badges and "10 of 11 apps need no account", all new
+images 200). Use `https://artificialigknorance.com` with `curl -L` when
+checking live, because `www.` redirects. Earlier the same week: metals prices
+and trial wording corrected, Gold Lifetime plan, Brazil (LGPD) section.
 
 **Uncommitted work queued for next ship:** none.
 
 **Waiting on Mike / open decisions:**
+- **Read the new Family Lists section in `privacy.astro` (Section 6).** It is
+  legal text I wrote from the app's real data flows (account sign-in, Supabase US
+  servers, Gmail sign-in codes, Sentry, delete-account steps). Mike has not
+  reviewed it line by line.
 - **Lifetime plan for Copper, Silver and Lithium.** Add `lifetime: '$24.99'` in
   `src/data/pricing.ts` for each only when it can really be bought in the live
   app (Copper's live build 64 lacks the paywall option; Silver's and Lithium's
   Lifetime purchases were `MISSING_METADATA` at Apple on 2026-10-04). Their App
   Store text already says Lifetime plans are available, which is ahead of
   reality (the metals session owns that).
-- **Brazil section wording.** Mike was shown the two main paragraphs and said
-  ship it. The privacy contact (encarregado) is info@artificialigknorance.com
-  with no personal name. If he wants a named contact or a lawyer's check, edit
-  the "If you are in Brazil (LGPD)" part of `privacy.astro`.
+- **Brazil section wording.** The privacy contact (encarregado) is
+  info@artificialigknorance.com with no personal name. If Mike wants a named
+  contact or a lawyer's check, edit the "If you are in Brazil (LGPD)" part of
+  `privacy.astro`.
 - **App Store "App Privacy" answers** for HealthTrail and SnapLedger should list
   photos sent for scanning and (HealthTrail) the device code. Not checked,
   outside the website.
+- **Family Lists photo storage** (`avatars`, `item-photos` buckets) is set public
+  in its database setup, so anyone with the exact photo link can open it. Belongs
+  to the Family Lists session; Mike has been told.
 
 **Parked for later:**
 - Real Escalator Field Command walkthrough video and a Portuguese privacy
-  policy: Mike said skip both (2026-10-12). Ask again only if he raises them.
+  policy: Mike said skip both (2026-11-14). Ask again only if he raises them.
 - **App Store affiliate enrollment**: not enrolled; small per-install
   revenue with no effort once Mike signs up. Parked, no urgency.
 
 (The eleven old held-back `appstore-sync/*` branches were deleted on
-2026-10-12 with Mike's OK, after checking nothing in them was missing from
-`main`. The Monday job will make new ones if it is unsure about a change.
-HealthTrail now uses this site's `/privacy/` page as its only privacy policy;
-SnapLedger's session changed its app link to it too.)
+2026-11-14 with Mike's OK, after checking nothing in them was missing from
+`main`. The Monday job will make new ones if it is unsure about a change. The
+Monday check also currently sees description changes for SnapLedger, Gold,
+Silver, Copper and Lithium that it will handle itself.
+HealthTrail uses this site's `/privacy/` page as its only privacy policy, and
+SnapLedger's App Store listing link switches when its 1.4.19 ships.)
 
 **Known issues / TODO:**
 - The "Smart App Banner default" is Escalator Field Command. If a different
@@ -304,8 +314,9 @@ SnapLedger's session changed its app link to it too.)
 - App Store developer-page links contain Mike's name in the web address
   (`.../developer/mike-dangerfield/...`). Visible text is clean; the link
   addresses cannot be changed.
-- The other eight apps have no Android version on the site. If any is on
-  Google Play, add its badge (see Conventions).
+- Only Escalator Field Command, Family Lists and Junkyard Titans have an Android
+  version on the site. If any other app reaches Google Play, add its badge (see
+  Conventions).
 - The Clock-In Workout picture was edited in one line ("Hi Mike" became "Hi
   there!"). The rest of the coach note in the pictures still has the app's own
   em dashes.
@@ -316,9 +327,11 @@ SnapLedger's session changed its app link to it too.)
 2. **No author name and no "one person" framing** on the public site.
 3. **No em dashes anywhere, ever**, enforced by a build check.
 4. **Wherever there is an App Store link there should be a Google Play link**,
-   but only for apps really on Google Play (Escalator Field Command only).
-5. **Privacy wording follows the real data flows** (see Conventions), and the
-   website policy is now HealthTrail's only policy.
+   but only for apps really on Google Play (Escalator Field Command, Family
+   Lists, Junkyard Titans).
+5. **Site-wide claims say "almost no accounts"** and name the exceptions
+   (Family Lists needs an account; Junkyard Titans keeps game progress on a
+   server). Privacy wording follows the real data flows (see Conventions).
 
 ## Session-end protocol
 
