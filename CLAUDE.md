@@ -301,9 +301,7 @@ and trial wording corrected, Gold Lifetime plan, Brazil (LGPD) section.
 
 (The eleven old held-back `appstore-sync/*` branches were deleted on
 2026-11-14 with Mike's OK, after checking nothing in them was missing from
-`main`. The Monday job will make new ones if it is unsure about a change. The
-Monday check also currently sees description changes for SnapLedger, Gold,
-Silver, Copper and Lithium that it will handle itself.
+`main`. The Monday job will make new ones if it is unsure about a change.
 HealthTrail uses this site's `/privacy/` page as its only privacy policy, and
 SnapLedger's App Store listing link switches when its 1.4.19 ships.)
 
