@@ -1,0 +1,137 @@
+{
+  "escalator-field-command": {
+    "pictures": [
+      "PurpleSource221/v4/89/3f/49/893f497c-6410-108c-e113-dc344189b7c2/Apple_iPhone_16_Pro_Max_Screenshot_2.png",
+      "PurpleSource221/v4/af/f6/59/aff6594f-ef13-c539-cf0c-d1a476eddb4a/Apple_iPhone_16_Pro_Max_Screenshot_3.png",
+      "PurpleSource211/v4/45/3d/26/453d26c3-17bd-9ba9-3659-a58d7e1bf049/Apple_iPhone_16_Pro_Max_Screenshot_4.png",
+      "PurpleSource211/v4/d9/d8/38/d9d83888-08fe-432d-8f60-11ea60369a4c/Apple_iPhone_16_Pro_Max_Screenshot_1.png",
+      "PurpleSource211/v4/b3/8a/af/b38aaf3d-298e-d555-a4a8-01cc7c6a0be0/Apple_iPhone_16_Pro_Max_Screenshot_8.png",
+      "PurpleSource211/v4/e7/b8/f8/e7b8f808-e374-536c-84a4-32ec76d4804a/Apple_iPhone_16_Pro_Max_Screenshot_6.png",
+      "PurpleSource211/v4/04/6d/56/046d565c-11e4-87dc-08c9-4a6904a2cfc6/Apple_iPhone_16_Pro_Max_Screenshot_7.png",
+      "PurpleSource211/v4/b7/ed/32/b7ed328a-826d-0ae6-2204-b794285a063b/Apple_iPhone_16_Pro_Max_Screenshot_5.png"
+    ],
+    "icon": "Purple211/v4/48/3c/27/483c2724-c700-4ae0-6ecb-7b3e19b30d7b/AppIcon-0-0-1x_U007epad-0-1-85-220.png"
+  },
+  "healthtrail-medical": {
+    "pictures": [
+      "PurpleSource211/v4/2d/06/70/2d067007-d0be-3a8e-4dfd-97eccf7de77d/Apple_iPhone_16_Pro_Max_Screenshot_8.png",
+      "PurpleSource221/v4/63/c9/be/63c9be05-3735-b083-da41-846941cde265/Apple_iPhone_16_Pro_Max_Screenshot_7.png",
+      "PurpleSource211/v4/1a/1f/8a/1a1f8afc-a13f-fe6f-e155-d67c1d9587d3/Apple_iPhone_16_Pro_Max_Screenshot_4.png",
+      "PurpleSource211/v4/62/14/f5/6214f5eb-97e4-ba56-ecc4-6947f242369f/Apple_iPhone_16_Pro_Max_Screenshot_9.png",
+      "PurpleSource221/v4/0f/9c/5f/0f9c5f7d-1d86-9a52-2753-d0290c5aab1d/Apple_iPhone_16_Pro_Max_Screenshot_5.png",
+      "PurpleSource211/v4/26/43/dd/2643dd35-d265-02c0-886b-e7ec0d336296/Apple_iPhone_16_Pro_Max_Screenshot_1.png",
+      "PurpleSource211/v4/3b/c8/f1/3bc8f18d-4adb-ed59-1fee-160e38efb3c8/Apple_iPhone_16_Pro_Max_Screenshot_2.png",
+      "PurpleSource221/v4/0b/d1/38/0bd138f0-5aea-2b0f-43fa-a0896e574020/Apple_iPhone_16_Pro_Max_Screenshot_3.png",
+      "PurpleSource221/v4/ad/49/17/ad4917a5-b282-c63f-6362-dff4df992901/Apple_iPhone_16_Pro_Max_Screenshot_6.png"
+    ],
+    "icon": "Purple221/v4/3d/39/de/3d39de26-fa13-afa1-ac35-8ee2c617d3ff/AppIcon-0-0-1x_U007ephone-0-1-85-220.png"
+  },
+  "clock-in-everyday": {
+    "pictures": [
+      "PurpleSource221/v4/2f/1b/82/2f1b82f2-8c7e-2557-03ec-ed6cb8f6b1bd/01-dashboard.png",
+      "PurpleSource221/v4/1f/0b/7c/1f0b7c75-727a-aec2-5431-175dd5aeb32a/02-workout.png",
+      "PurpleSource211/v4/f5/c7/16/f5c716a1-e4af-df40-4e6d-e166f004eb47/03-progress.png",
+      "PurpleSource211/v4/9d/b8/23/9db823ec-5c2e-270b-7258-5baeb6febcbf/04-supplements.png",
+      "PurpleSource211/v4/74/03/f6/7403f651-c290-5950-280d-b35d23dde7a1/05-paywall.png"
+    ],
+    "icon": "Purple211/v4/e4/e6/83/e4e683ac-00f6-0caf-5c89-d7bb17845b35/AppIcon-0-0-1x_U007epad-0-1-85-220.png"
+  },
+  "snapledger": {
+    "pictures": [
+      "PurpleSource211/v4/bd/b5/30/bdb5305d-a788-b901-b336-0270222c063b/Apple_iPhone_16_Pro_Max_Screenshot_1.png",
+      "PurpleSource211/v4/64/3a/62/643a6233-8202-4759-97da-72b20484825b/Apple_iPhone_16_Pro_Max_Screenshot_4.png",
+      "PurpleSource211/v4/b5/b2/06/b5b206ed-e5bc-9b01-dd93-2ffe6efbd573/Apple_iPhone_16_Pro_Max_Screenshot_5.png",
+      "PurpleSource211/v4/20/70/af/2070af07-ec5a-87df-3d91-8724554ca40e/Apple_iPhone_16_Pro_Max_Screenshot_2.png",
+      "PurpleSource221/v4/24/44/4c/24444c41-9da7-d1dd-ccee-e43e7f4aedeb/Apple_iPhone_16_Pro_Max_Screenshot_3.png",
+      "PurpleSource211/v4/1d/3c/cb/1d3ccbe9-f519-a4d3-6fed-2e71a508aded/Apple_iPhone_16_Pro_Max_Screenshot_6.png"
+    ],
+    "icon": "Purple211/v4/00/af/04/00af048c-a354-2cba-3f09-98986fd608b8/AppIcon-0-0-1x_U007ephone-0-1-85-220.png"
+  },
+  "copper-watcher": {
+    "pictures": [
+      "PurpleSource211/v4/60/76/5c/60765c47-a494-cd8c-1519-90d5e53ecc94/Apple_iPhone_16_Pro_Max_Screenshot_3.png",
+      "PurpleSource211/v4/6a/ab/df/6aabdf9b-2df0-a96b-17a7-9a82a3007b7b/Apple_iPhone_16_Pro_Max_Screenshot_7.png",
+      "PurpleSource221/v4/fb/00/c1/fb00c176-f162-8c55-aee0-241e78d8159b/Apple_iPhone_16_Pro_Max_Screenshot_1.png",
+      "PurpleSource221/v4/d4/64/f5/d464f5ca-09f4-0c5e-d63a-5322f3e2484a/Apple_iPhone_16_Pro_Max_Screenshot_8.png",
+      "PurpleSource221/v4/d1/0d/99/d10d99e0-88c4-95d3-e0f2-92621b5d3d68/Apple_iPhone_16_Pro_Max_Screenshot_4.png",
+      "PurpleSource221/v4/1d/ec/89/1dec8932-d6f6-c7a8-4857-501a067656d6/Apple_iPhone_16_Pro_Max_Screenshot_5.png",
+      "PurpleSource221/v4/1c/46/77/1c467760-c21e-4970-4ddd-0996bb427428/Apple_iPhone_16_Pro_Max_Screenshot_2.png",
+      "PurpleSource211/v4/ef/d0/cd/efd0cd68-cbd4-6dfa-aee0-d5ee708358b9/Apple_iPhone_16_Pro_Max_Screenshot_6.png"
+    ],
+    "icon": "Purple211/v4/1d/7f/fc/1d7ffc26-cca0-e515-1cb7-beb55df72764/AppIcon-0-0-1x_U007epad-0-1-85-220.png"
+  },
+  "gold-watcher": {
+    "pictures": [
+      "PurpleSource221/v4/d9/3e/af/d93eafa1-55a0-cf20-10ed-315a1a122817/Apple_iPhone_16_Pro_Max_Screenshot_7.png",
+      "PurpleSource221/v4/49/1e/62/491e625e-74ba-0416-e62c-a85a554d58d1/Apple_iPhone_16_Pro_Max_Screenshot_5.png",
+      "PurpleSource211/v4/46/f2/c9/46f2c926-dcd3-8e57-0e6b-10b85aec9a38/Apple_iPhone_16_Pro_Max_Screenshot_6.png",
+      "PurpleSource221/v4/0b/75/0a/0b750aca-7532-7f27-1c3a-ad267ed13e49/Apple_iPhone_16_Pro_Max_Screenshot_1.png",
+      "PurpleSource221/v4/d1/c2/ab/d1c2ab7a-755f-0759-3a70-92ac709cf010/Apple_iPhone_16_Pro_Max_Screenshot_3.png",
+      "PurpleSource211/v4/bb/ce/d5/bbced5f2-b8a3-069a-10c7-f41011e5e8e3/Apple_iPhone_16_Pro_Max_Screenshot_2.png",
+      "PurpleSource221/v4/62/a8/86/62a886a9-a261-b7a7-e86a-15ce06433e0d/Apple_iPhone_16_Pro_Max_Screenshot_4.png"
+    ],
+    "icon": "Purple221/v4/2d/f2/d2/2df2d2e5-9762-11e5-89f9-1fafad8b1d08/AppIcon-0-0-1x_U007epad-0-1-85-220.png"
+  },
+  "silver-watcher": {
+    "pictures": [
+      "PurpleSource221/v4/2f/a1/04/2fa10468-d036-f019-6536-05861e96f09e/Apple_iPhone_16_Pro_Max_Screenshot_5.png",
+      "PurpleSource211/v4/04/96/8b/04968b6c-a57b-027b-ebee-1e7efc409642/Apple_iPhone_16_Pro_Max_Screenshot_7.png",
+      "PurpleSource211/v4/ee/df/a2/eedfa2a9-2b27-12f9-9417-9b4841a19830/Apple_iPhone_16_Pro_Max_Screenshot_2.png",
+      "PurpleSource221/v4/a0/88/69/a088696b-948d-c895-3e93-cf42ba875754/Apple_iPhone_16_Pro_Max_Screenshot_3.png",
+      "PurpleSource211/v4/bd/f2/30/bdf2301c-5239-8976-6f74-e15d850bb42b/Apple_iPhone_16_Pro_Max_Screenshot_4.png",
+      "PurpleSource221/v4/f5/7a/30/f57a30f4-97a2-8717-d858-f1486c05b2bc/Apple_iPhone_16_Pro_Max_Screenshot_1.png",
+      "PurpleSource221/v4/d4/1d/11/d41d11fb-9ef9-e067-c121-ac6151ca1602/Apple_iPhone_16_Pro_Max_Screenshot_6.png"
+    ],
+    "icon": "Purple221/v4/e6/07/c8/e607c83a-51dd-5006-5c55-daadf8b4d631/AppIcon-0-0-1x_U007epad-0-1-85-220.png"
+  },
+  "lithium-watcher": {
+    "pictures": [
+      "PurpleSource211/v4/c8/f2/f0/c8f2f090-f76f-d594-45a1-d4286d4ecc79/Apple_iPhone_16_Pro_Max_Screenshot_1.png",
+      "PurpleSource211/v4/06/5d/b0/065db062-5869-4274-2668-06df17476acf/Apple_iPhone_16_Pro_Max_Screenshot_2.png",
+      "PurpleSource211/v4/ba/70/f8/ba70f8a0-7a66-db90-e800-be0855b49808/Apple_iPhone_16_Pro_Max_Screenshot_6.png",
+      "PurpleSource211/v4/6a/bc/71/6abc71ae-e7f2-c438-cbbc-8c8354ee5a0c/Apple_iPhone_16_Pro_Max_Screenshot_3.png",
+      "PurpleSource221/v4/c6/a7/c4/c6a7c41a-a452-48ed-2431-1510279a61eb/Apple_iPhone_16_Pro_Max_Screenshot_4.png",
+      "PurpleSource221/v4/76/eb/17/76eb17f8-34ed-c5d9-f7e5-51d15e97b462/Apple_iPhone_16_Pro_Max_Screenshot_5.png",
+      "PurpleSource211/v4/ff/d3/12/ffd3124d-3b34-5a83-64a2-d9b2f6e09f66/Apple_iPhone_16_Pro_Max_Screenshot_7.png"
+    ],
+    "icon": "Purple221/v4/22/a1/c4/22a1c483-e29a-1a43-3289-79dd9610d56d/AppIcon-0-0-1x_U007epad-0-1-85-220.png"
+  },
+  "ridgepacker": {
+    "pictures": [
+      "PurpleSource221/v4/fa/02/3e/fa023e94-e88f-d777-9bdf-5393cdf1534b/01_gear.png",
+      "PurpleSource211/v4/d6/79/dd/d679dd37-b972-a4df-d709-80d289d4b5b5/02_trip.png",
+      "PurpleSource221/v4/f8/c7/5f/f8c75f76-99fa-37b8-14d7-5c7d09f06a06/03_weight.png",
+      "PurpleSource221/v4/ac/8a/53/ac8a539a-e2dc-2d00-c40b-cc5f4daa516a/04_sublists.png",
+      "PurpleSource211/v4/88/27/7d/88277d3d-5cfa-857e-39c3-0202d1fbc14c/05_edc.png",
+      "PurpleSource221/v4/7b/e9/b2/7be9b264-d7e5-d147-9b09-7fc5e890395a/06_export.png"
+    ],
+    "icon": "Purple211/v4/80/69/de/8069de36-d29b-2b34-7871-15b2592a702f/AppIcon-0-0-1x_U007epad-0-1-85-220.png"
+  },
+  "family-lists": {
+    "pictures": [
+      "PurpleSource211/v4/10/d5/55/10d5550a-8a3f-11fc-3b8a-9fa842ad4b7d/01_cover.png",
+      "PurpleSource221/v4/4c/31/3e/4c313e87-baa6-e678-1a1b-254f9d95a219/02_grocery.png",
+      "PurpleSource221/v4/94/57/0c/94570c3b-a55f-fb1e-808e-176839544316/03_gifts.png",
+      "PurpleSource211/v4/52/d0/35/52d03549-6282-a2a0-dc15-a1001b7c258d/04_wish-list.png",
+      "PurpleSource221/v4/36/12/0b/36120bb2-6209-d872-c0c0-b1276c4f2f75/05_dinner.png",
+      "PurpleSource221/v4/4e/e7/be/4ee7bedb-d5a5-e9e6-cf72-8b3db22a01aa/06_menu.png",
+      "PurpleSource221/v4/2d/7d/1a/2d7d1a4f-7444-f41c-196f-e99dcbcbe601/07_stuff.png"
+    ],
+    "icon": "Purple211/v4/6e/4d/6e/6e4d6efb-b32b-0a82-2a70-36af2f396901/AppIcon-0-0-1x_U007epad-0-1-85-220.png"
+  },
+  "junkyard-titans": {
+    "pictures": [
+      "PurpleSource211/v4/b3/8e/bd/b38ebd46-a3b2-3224-5255-36a3bd40fb57/01_cover.png",
+      "PurpleSource211/v4/f0/df/cf/f0dfcffd-ef44-c2d4-6921-707285241a27/02_game.png",
+      "PurpleSource221/v4/cc/7b/23/cc7b235a-563d-cd6d-620c-17e91f78fb4d/03_trade.png",
+      "PurpleSource221/v4/5f/aa/5b/5faa5b44-597b-fe01-cfda-c780ba245ad8/04_binder.png",
+      "PurpleSource221/v4/ec/81/12/ec81121a-cc8d-0492-6f7c-0f7ca4720b45/05_prototype_crate.png",
+      "PurpleSource211/v4/b8/b9/53/b8b953a2-1eb0-b544-3531-0bf57457d930/06_battle.png",
+      "PurpleSource221/v4/43/34/ea/4334ea35-275e-3b48-5ffb-d3f38dcc5674/07_scavenge.png",
+      "PurpleSource221/v4/92/1e/a6/921ea6ac-4802-441f-95cc-b85e050f891d/08_market.png",
+      "PurpleSource221/v4/0e/3d/5d/0e3d5dc5-361c-1532-ae06-0cb76fac1175/09_warehouse.png",
+      "PurpleSource211/v4/40/3d/34/403d34d0-b7e0-70ef-cb82-e725d69038bd/10_garage.png"
+    ],
+    "icon": "Purple211/v4/96/0e/dd/960edd77-715e-942f-6cbd-0e9e1ea1969e/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png"
+  }
+}

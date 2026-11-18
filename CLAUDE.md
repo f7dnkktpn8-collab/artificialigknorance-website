@@ -261,6 +261,24 @@ debug text or a typo.
   App Store description changes" in `git log` that you don't recognize
   authoring, that's this job, not a mistake.
 
+- **App Store pictures check (`scripts/appstore/check-images.mjs`).** Asks
+  Apple for every app's current iPhone pictures and icon and compares them
+  with `scripts/appstore/images-seen.json` (Apple gives a replaced picture a
+  new web address, so a changed address means a changed picture). `--apply`
+  swaps in any changed picture that sits in a slot the site already shows,
+  rebuilds the matching homepage tile and icon, and refreshes the list. It
+  holds back, with a note, anything that needs a human eye: a changed picture
+  count, a picture the site leaves off on purpose (cover collages, the
+  Clock-In paywall with a debug line, SnapLedger's typo poster), and the
+  hand-edited Clock-In workout picture. `--accept <app>` marks an app as
+  handled after a manual fix. The slot list at the top of the script is the
+  map from App Store position to site file: keep it in step when a gallery
+  changes. Look at every new picture before it goes on the site: hold it back
+  if it shows debug text, a typo, an unfinished screen, or a personal name.
+  Publishing still needs Mike's "ship it" unless he says otherwise. The main
+  folder's `node_modules` gets deleted by the tidy-up rule, so run `npm ci`
+  before any build there.
+
 ## Current Session State
 
 Last updated: 2026-11-16: Junkyard Titans and Family Lists are on the site
