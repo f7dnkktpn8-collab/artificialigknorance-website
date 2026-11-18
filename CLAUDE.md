@@ -201,19 +201,28 @@ Old anchors still exist: `#apps`, `#industry`, `#health`, `#financial`,
   citations like buggy switch, safety zone clearance, comb impact
   force). Don't invent or edit those answers without him.
 
-## App Store scraping (works, keep this recipe)
+## App Store screenshots (works, keep this recipe)
 
-Scrape `apps.apple.com/<country>/app/<slug>/id<id>` for embedded
-`*.mzstatic.com/image/thumb/PurpleSource{211,221}/...` URLs. Filename
-patterns vary by app:
+Best source (checked 2026-11-18): Apple's lookup service,
+`https://itunes.apple.com/lookup?id=<id>&country=<cc>`. Its `screenshotUrls`
+are the iPhone pictures in display order (`ipadScreenshotUrls` are separate),
+and `artworkUrl512` is the icon. Swap the trailing size in each URL for
+`/1290x0w.png` to get the full-size file (1290x2803). To find which pictures
+changed, shrink the new and old ones to a tiny grey image and compare: an
+unchanged picture differs by under 1, a changed one by 10 or more.
 
-- Older apps: `Apple_iPhone_Xs_Screenshot_N.png`
-- Most apps: `Apple_iPhone_16_Pro_Max_Screenshot_N.png`
-- Lithium Watcher style: `0N_iphone.png`
+(The older page-scraping route also works: fetch
+`apps.apple.com/<country>/app/<slug>/id<id>` and pull the `mzstatic.com`
+`PurpleSource` URLs, but that mixes iPhone and iPad sets in no useful order.)
 
-Use a regex that covers all three. Append `/1290x2796bb.png` to the
-base URL to fetch at full resolution. The iTunes Search API's
-`screenshotUrls` array is empty for these apps, so DON'T use that.
+Most apps' App Store pictures are now captioned posters (headline above a
+phone). The app pages show them as they are, one per figure, with a short
+caption underneath. Family Lists and Junkyard Titans each have a collage
+"cover" poster as picture 1 that the site leaves out (it repeats the page
+header and leaves one picture alone in the last grid row). Keep each page's
+count at a multiple of the grid's columns: 3 columns for most, 4 for
+Escalator Field Command. Never put a store picture on the site that shows
+debug text or a typo.
 
 ## Image pipeline
 
