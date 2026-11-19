@@ -312,11 +312,14 @@ before its build as of 2026-11-18.
 **Uncommitted work queued for next ship:** none.
 
 **Waiting on Mike / open decisions:**
-- **Flagged outside the website:** the Clock-In paywall store picture shows a
-  "DEBUG: Bypass paywall" line, SnapLedger's store poster has a typo ("We
-  extracts the data"), and HealthTrail's poster says "100% Private and Secure"
-  while the site's wording is more careful about photo scanning. All three are
-  kept off or edited on the site.
+- **Store pictures to fix in the apps' own sessions** (notes sent to the
+  Clock-In, SnapLedger and HealthTrail sessions on 2026-11-18, at Mike's
+  request): the Clock-In paywall store picture shows a "DEBUG: Bypass
+  paywall" line (and its workout picture says "Hi Mike"), SnapLedger's store
+  poster has a typo ("We extracts the data"), and HealthTrail's poster says
+  "100% Private and Secure" while the site's wording is more careful about
+  photo scanning. All three are kept off or edited on the site until the
+  fixed pictures are live; each session was asked to tell this one.
 - **Read the new Family Lists section in `privacy.astro` (Section 6).** It is
   legal text I wrote from the app's real data flows (account sign-in, Supabase US
   servers, Gmail sign-in codes, Sentry, delete-account steps). Mike has not
