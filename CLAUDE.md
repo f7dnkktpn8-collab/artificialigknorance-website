@@ -320,7 +320,11 @@ before its build as of 2026-11-18.
   Apple's review, replaces all pictures with 7 new ones with neither problem
   and no paywall picture, so the Clock-In picture count will change when it
   goes live and the pictures check will flag it), SnapLedger's store
-  poster has a typo ("We extracts the data"), and HealthTrail's poster says
+  poster has a typo ("We extracts the data"; its session replied that
+  pending version 1.5.2, submitted 2026-11-18 and waiting for review,
+  replaces the whole set with six posters without it, so once 1.5.2 is live
+  its 6th picture, "Subscriptions, watched for you", can stop being skipped in
+  `check-images.mjs` and be added to the page), and HealthTrail's poster says
   "100% Private and Secure" while the site's wording is more careful about
   photo scanning. All three are kept off or edited on the site until the
   fixed pictures are live; each session was asked to tell this one.
