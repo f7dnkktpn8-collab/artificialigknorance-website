@@ -315,7 +315,11 @@ before its build as of 2026-11-18.
 - **Store pictures to fix in the apps' own sessions** (notes sent to the
   Clock-In, SnapLedger and HealthTrail sessions on 2026-11-18, at Mike's
   request): the Clock-In paywall store picture shows a "DEBUG: Bypass
-  paywall" line (and its workout picture says "Hi Mike"), SnapLedger's store
+  paywall" line (and its workout picture says "Hi Mike"; the Clock-In
+  session replied the same day that its pending version 0.4.26, waiting for
+  Apple's review, replaces all pictures with 7 new ones with neither problem
+  and no paywall picture, so the Clock-In picture count will change when it
+  goes live and the pictures check will flag it), SnapLedger's store
   poster has a typo ("We extracts the data"), and HealthTrail's poster says
   "100% Private and Secure" while the site's wording is more careful about
   photo scanning. All three are kept off or edited on the site until the
