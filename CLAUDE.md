@@ -275,30 +275,48 @@ debug text or a typo.
   map from App Store position to site file: keep it in step when a gallery
   changes. Look at every new picture before it goes on the site: hold it back
   if it shows debug text, a typo, an unfinished screen, or a personal name.
-  Publishing still needs Mike's "ship it" unless he says otherwise. The main
-  folder's `node_modules` gets deleted by the tidy-up rule, so run `npm ci`
-  before any build there.
+  Publishing needs Mike's "ship it". The one exception: on 2026-11-18 Mike
+  said "publish automatically" for the one-time Friday 20 Nov run (scheduled
+  task `website-picture-check-nov20`), limited to plain picture swaps. The
+  main folder's `node_modules` gets deleted by the tidy-up rule, so run
+  `npm ci` before any build there (the Monday description job now does this
+  itself).
 
 ## Current Session State
 
-Last updated: 2026-11-16: Junkyard Titans and Family Lists are on the site
-(own pages, homepage tiles, menus, About, privacy Section 6), live as `7e82312`.
-Nothing in flight.
+Last updated: 2026-11-18: refreshed App Store pictures, the Family Lists
+groceries hero phone and the pictures check script are live as `6bccd1d`.
+A one-time check is scheduled for Friday 20 Nov.
 
-**Current focus:** None. No branches or work copies are open.
+**Current focus:** None. No branches or work copies are open. Waiting for
+Friday's scheduled picture check.
 
 **Last shipped:** the website is static, so "shipped" = pushed to `main` and
-Netlify auto-deploys. `origin/main` is `7e82312`, verified live 2026-11-16
-(home, `/junkyard-titans/`, `/family-lists/`, `/privacy/`, `/about/` all 200, no em dashes,
-both new pages carry App Store and Google Play links, homepage shows six
-everyday tiles with Play badges and "10 of 11 apps need no account", all new
-images 200). Use `https://artificialigknorance.com` with `curl -L` when
-checking live, because `www.` redirects. Earlier the same week: metals prices
-and trial wording corrected, Gold Lifetime plan, Brazil (LGPD) section.
+Netlify auto-deploys. The last site change is `6bccd1d` (pushed 2026-11-18):
+left hero phone is now Family Lists groceries (was Clock-In), new App Store
+pictures on the Escalator Field Command, HealthTrail Medical, RidgePacker,
+Family Lists and Junkyard Titans pages, six homepage tiles and three icons
+refreshed, plus `scripts/appstore/check-images.mjs`. Verified live the same
+day: home and seven app pages 200, all 91 added or changed picture files 200,
+no em dashes. Use `https://artificialigknorance.com` with `curl -L` when
+checking live, because `www.` redirects. Before that: Junkyard Titans and
+Family Lists pages (`7e82312`, 2026-11-16).
+
+**Scheduled:** `website-picture-check-nov20` (one time, Fri 20 Nov, about 10 AM
+local, needs the Claude app open). It runs the pictures check, skips pictures
+with debug text, typos or personal names, publishes plain swaps itself and
+checks the live site. It prepares only (no push) if a picture count changes or
+a page needs hand edits. Monday `weekly-appstore-website-sync` runs `npm ci`
+before its build as of 2026-11-18.
 
 **Uncommitted work queued for next ship:** none.
 
 **Waiting on Mike / open decisions:**
+- **Flagged outside the website:** the Clock-In paywall store picture shows a
+  "DEBUG: Bypass paywall" line, SnapLedger's store poster has a typo ("We
+  extracts the data"), and HealthTrail's poster says "100% Private and Secure"
+  while the site's wording is more careful about photo scanning. All three are
+  kept off or edited on the site.
 - **Read the new Family Lists section in `privacy.astro` (Section 6).** It is
   legal text I wrote from the app's real data flows (account sign-in, Supabase US
   servers, Gmail sign-in codes, Sentry, delete-account steps). Mike has not
@@ -348,15 +366,17 @@ SnapLedger's App Store listing link switches when its 1.4.19 ships.)
 - Local-only leftovers in `mockups/` (git-ignored). Safe to delete.
 
 **Recent key decisions:**
-1. **Daylight redesign** shipped site-wide (Mike picked option A).
-2. **No author name and no "one person" framing** on the public site.
-3. **No em dashes anywhere, ever**, enforced by a build check.
-4. **Wherever there is an App Store link there should be a Google Play link**,
+1. **No author name and no "one person" framing** on the public site.
+2. **No em dashes anywhere, ever**, enforced by a build check.
+3. **Wherever there is an App Store link there should be a Google Play link**,
    but only for apps really on Google Play (Escalator Field Command, Family
    Lists, Junkyard Titans).
-5. **Site-wide claims say "almost no accounts"** and name the exceptions
+4. **Site-wide claims say "almost no accounts"** and name the exceptions
    (Family Lists needs an account; Junkyard Titans keeps game progress on a
    server). Privacy wording follows the real data flows (see Conventions).
+5. **Left hero phone is Family Lists groceries** (Mike picked option A,
+   2026-11-18), and store pictures with debug text, typos, a personal name or
+   a collage cover stay off the site.
 
 ## Session-end protocol
 
