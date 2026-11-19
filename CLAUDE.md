@@ -324,10 +324,19 @@ before its build as of 2026-11-18.
   pending version 1.5.2, submitted 2026-11-18 and waiting for review,
   replaces the whole set with six posters without it, so once 1.5.2 is live
   its 6th picture, "Subscriptions, watched for you", can stop being skipped in
-  `check-images.mjs` and be added to the page), and HealthTrail's poster says
-  "100% Private and Secure" while the site's wording is more careful about
-  photo scanning. All three are kept off or edited on the site until the
-  fixed pictures are live; each session was asked to tell this one.
+  `check-images.mjs` and be added to the page), and HealthTrail's 2nd poster
+  says "100% Private and Secure" while the site's wording is more careful
+  about photo scanning. The Clock-In and SnapLedger pictures are kept off or
+  edited on the site until the fixed pictures are live. The HealthTrail poster
+  WAS on the site (the gallery showed it until 2026-11-18, my earlier note
+  said otherwise and was wrong); it is now removed (8 pictures, slot 2 skipped
+  in `check-images.mjs`). HealthTrail's pending 2.3.9 (build 120, 10 new
+  posters, waiting for review) drops it, but one new poster says records are
+  "never sold or shared with anyone", which is also stronger than the truth
+  (scan photos go through its server to an AI provider); that session is
+  asking Mike about a rewording. When 2.3.9 is live, read every new poster
+  against the privacy wording before adding any. Each session was asked to
+  tell this one when its pictures are live.
 - **Read the new Family Lists section in `privacy.astro` (Section 6).** It is
   legal text I wrote from the app's real data flows (account sign-in, Supabase US
   servers, Gmail sign-in codes, Sentry, delete-account steps). Mike has not
