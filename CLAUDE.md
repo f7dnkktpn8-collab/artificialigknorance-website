@@ -333,10 +333,13 @@ before its build as of 2026-11-18.
   in `check-images.mjs`). HealthTrail's pending 2.3.9 (build 120, 10 new
   posters, waiting for review) drops it, but one new poster says records are
   "never sold or shared with anyone", which is also stronger than the truth
-  (scan photos go through its server to an AI provider); that session is
-  asking Mike about a rewording. When 2.3.9 is live, read every new poster
-  against the privacy wording before adding any. Each session was asked to
-  tell this one when its pictures are live.
+  (scan photos go through its server to an AI provider). Mike chose on
+  2026-11-18 to leave 2.3.9 in review as is; the corrected poster ("Not saved
+  on our servers, and we never sell your data.") ships with the next HealthTrail
+  version. So when 2.3.9 goes live, keep that one poster off the site (the
+  other nine are fine to add after reading each against the privacy wording),
+  and caption any privacy poster no more strongly than that corrected wording.
+  Each session was asked to tell this one when its pictures are live.
 - **Read the new Family Lists section in `privacy.astro` (Section 6).** It is
   legal text I wrote from the app's real data flows (account sign-in, Supabase US
   servers, Gmail sign-in codes, Sentry, delete-account steps). Mike has not
