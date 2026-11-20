@@ -268,9 +268,10 @@ debug text or a typo.
   swaps in any changed picture that sits in a slot the site already shows,
   rebuilds the matching homepage tile and icon, and refreshes the list. It
   holds back, with a note, anything that needs a human eye: a changed picture
-  count, a picture the site leaves off on purpose (cover collages, the
-  Clock-In paywall with a debug line, SnapLedger's typo poster), and the
-  hand-edited Clock-In workout picture. `--accept <app>` marks an app as
+  count, a picture the site leaves off on purpose (the Family Lists,
+  Junkyard Titans and Clock-In cover posters, HealthTrail's "100% Private"
+  poster), and any picture marked as edited by hand (none since 20 Nov,
+  when Clock-In's new set replaced the hand-edited workout picture). `--accept <app>` marks an app as
   handled after a manual fix. The slot list at the top of the script is the
   map from App Store position to site file: keep it in step when a gallery
   changes. Look at every new picture before it goes on the site: hold it back
