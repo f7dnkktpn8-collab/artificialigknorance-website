@@ -276,71 +276,59 @@ debug text or a typo.
   map from App Store position to site file: keep it in step when a gallery
   changes. Look at every new picture before it goes on the site: hold it back
   if it shows debug text, a typo, an unfinished screen, or a personal name.
-  Publishing needs Mike's "ship it". The one exception: on 2026-11-18 Mike
-  said "publish automatically" for the one-time Friday 20 Nov run (scheduled
-  task `website-picture-check-nov20`), limited to plain picture swaps. The
-  main folder's `node_modules` gets deleted by the tidy-up rule, so run
+  Publishing needs Mike's "ship it". (The one exception, a "publish
+  automatically" for the one-time Friday 20 Nov run, has been used up. A
+  picture count change always needs the page edited by hand and his "ship it".)
+  The main folder's `node_modules` gets deleted by the tidy-up rule, so run
   `npm ci` before any build there (the Monday description job now does this
   itself).
 
 ## Current Session State
 
-Last updated: 2026-11-18: refreshed App Store pictures, the Family Lists
-groceries hero phone and the pictures check script are live as `6bccd1d`.
-A one-time check is scheduled for Friday 20 Nov.
+Last updated: 2026-11-20: every site picture matches the live App Store
+listings as of today; the new Escalator, SnapLedger, Clock-In and four metals
+pictures are live as `4331f67`. HealthTrail 2.3.9 is the only set still to come.
 
-**Current focus:** None. No branches or work copies are open. Waiting for
-Friday's scheduled picture check.
+**Current focus:** None. No branches or work copies are open.
 
 **Last shipped:** the website is static, so "shipped" = pushed to `main` and
-Netlify auto-deploys. The last site change is `6bccd1d` (pushed 2026-11-18):
-left hero phone is now Family Lists groceries (was Clock-In), new App Store
-pictures on the Escalator Field Command, HealthTrail Medical, RidgePacker,
-Family Lists and Junkyard Titans pages, six homepage tiles and three icons
-refreshed, plus `scripts/appstore/check-images.mjs`. Verified live the same
-day: home and seven app pages 200, all 91 added or changed picture files 200,
-no em dashes. Use `https://artificialigknorance.com` with `curl -L` when
-checking live, because `www.` redirects. Before that: Junkyard Titans and
-Family Lists pages (`7e82312`, 2026-11-16).
+Netlify auto-deploys. The last site change is `4331f67` (pushed 2026-11-20,
+Mike said "ship it"): new App Store pictures on Escalator Field Command (8),
+SnapLedger (6, typo-free set from 1.5.2), Clock-In Everyday (6 of its 7, cover
+left off) and Copper, Gold, Silver and Lithium Watcher (6 each), the
+subscriptions homepage tile, and 15 old unused picture files removed. Verified
+live: 12 app and home pages 200, all 97 added or changed picture files 200,
+gallery counts as expected, no em dashes. Before that: HealthTrail poster
+removal (`4c9abae`) and the 2026-11-18 refresh (`6bccd1d`). Use
+`https://artificialigknorance.com` with `curl -L` when checking live, because
+`www.` redirects.
 
-**Scheduled:** `website-picture-check-nov20` (one time, Fri 20 Nov, about 10 AM
-local, needs the Claude app open). It runs the pictures check, skips pictures
-with debug text, typos or personal names, publishes plain swaps itself and
-checks the live site. It prepares only (no push) if a picture count changes or
-a page needs hand edits. Monday `weekly-appstore-website-sync` runs `npm ci`
-before its build as of 2026-11-18.
+**Scheduled:** nothing picture-related. The one-time Friday run
+(`website-picture-check-nov20`) ran 2026-11-20 and prepared the work above (it
+could not publish alone because picture counts changed). Monday
+`weekly-appstore-website-sync` runs `npm ci` before its build as of 2026-11-18.
 
 **Uncommitted work queued for next ship:** none.
 
 **Waiting on Mike / open decisions:**
-- **Store pictures to fix in the apps' own sessions** (notes sent to the
-  Clock-In, SnapLedger and HealthTrail sessions on 2026-11-18, at Mike's
-  request): the Clock-In paywall store picture shows a "DEBUG: Bypass
-  paywall" line (and its workout picture says "Hi Mike"; the Clock-In
-  session replied the same day that its pending version 0.4.26, waiting for
-  Apple's review, replaces all pictures with 7 new ones with neither problem
-  and no paywall picture, so the Clock-In picture count will change when it
-  goes live and the pictures check will flag it), SnapLedger's store
-  poster has a typo ("We extracts the data"; its session replied that
-  pending version 1.5.2, submitted 2026-11-18 and waiting for review,
-  replaces the whole set with six posters without it, so once 1.5.2 is live
-  its 6th picture, "Subscriptions, watched for you", can stop being skipped in
-  `check-images.mjs` and be added to the page), and HealthTrail's 2nd poster
-  says "100% Private and Secure" while the site's wording is more careful
-  about photo scanning. The Clock-In and SnapLedger pictures are kept off or
-  edited on the site until the fixed pictures are live. The HealthTrail poster
-  WAS on the site (the gallery showed it until 2026-11-18, my earlier note
-  said otherwise and was wrong); it is now removed (8 pictures, slot 2 skipped
-  in `check-images.mjs`). HealthTrail's pending 2.3.9 (build 120, 10 new
-  posters, waiting for review) drops it, but one new poster says records are
-  "never sold or shared with anyone", which is also stronger than the truth
-  (scan photos go through its server to an AI provider). Mike chose on
-  2026-11-18 to leave 2.3.9 in review as is; the corrected poster ("Not saved
-  on our servers, and we never sell your data.") ships with the next HealthTrail
-  version. So when 2.3.9 goes live, keep that one poster off the site (the
-  other nine are fine to add after reading each against the privacy wording),
-  and caption any privacy poster no more strongly than that corrected wording.
-  Each session was asked to tell this one when its pictures are live.
+- **HealthTrail's new pictures (2.3.9, build 120, 10 posters, in Apple's
+  review).** The HealthTrail poster headed "100% Private and Secure" was on the
+  site until 2026-11-18 and is now removed (8 pictures; slot 2 is skipped in
+  `check-images.mjs`; the earlier note that it was never on the site was
+  wrong). 2.3.9 drops that headline, but one new poster says records are
+  "never sold or shared with anyone", which is stronger than the truth (scan
+  photos go through its server to an AI provider). Mike chose to leave 2.3.9 in
+  review as is; the corrected poster ("Not saved on our servers, and we never
+  sell your data.") ships with the next HealthTrail version. So when 2.3.9 goes
+  live (its session will message this one), keep that one poster off the site,
+  read the other nine against the privacy wording, and prepare the page by hand
+  (the picture count changes from 9 to 10). Caption any privacy poster no more
+  strongly than the corrected wording. Resolved 2026-11-20: Clock-In 0.4.26 and
+  SnapLedger 1.5.2 went live without the debug line, the "Hi Mike" greeting or
+  the typo, and their new pictures are on the site.
+- **Picture check on a schedule.** The pictures check only runs when someone
+  runs it. Offered to Mike: add it to the Monday description job, publishing
+  plain same-count swaps and preparing the rest. Not decided.
 - **Read the new Family Lists section in `privacy.astro` (Section 6).** It is
   legal text I wrote from the app's real data flows (account sign-in, Supabase US
   servers, Gmail sign-in codes, Sentry, delete-account steps). Mike has not
