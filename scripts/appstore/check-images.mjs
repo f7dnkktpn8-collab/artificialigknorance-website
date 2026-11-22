@@ -73,6 +73,12 @@ const TILES = {
   'ridge-catalog': ['ridgepacker', 1],
   'snap-overview': ['snapledger', 1],
   'snap-subs': ['snapledger', 6],
+  'clock-poster-1': ['clock-in-everyday', 2],
+  'clock-poster-2': ['clock-in-everyday', 5],
+  'fl-poster-groceries': ['family-lists', 2],
+  'fl-poster-gifts': ['family-lists', 3],
+  'jt-crusher': ['junkyard-titans', 2],
+  'jt-arena': ['junkyard-titans', 6],
 };
 
 const args = process.argv.slice(2);
