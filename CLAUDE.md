@@ -285,14 +285,14 @@ debug text or a typo.
 
 ## Current Session State
 
-Last updated: 2026-11-22: every app page and the homepage tiles for Clock-In,
+Last updated: 2026-11-21: every app page and the homepage tiles for Clock-In,
 Family Lists and Junkyard Titans now show the new App Store posters (`9aad256`).
 HealthTrail 2.3.9 is the only set still to come.
 
 **Current focus:** None. No branches or work copies are open.
 
 **Last shipped:** the website is static, so "shipped" = pushed to `main` and
-Netlify auto-deploys. The last site change is `9aad256` (pushed 2026-11-22,
+Netlify auto-deploys. The last site change is `9aad256` (pushed 2026-11-21,
 Mike said "ship it"): six homepage tile pictures (two each for Clock-In, Family
 Lists and Junkyard Titans, all listed in `TILES` in `check-images.mjs`) now come
 from the new posters, plus Junkyard Titans' new icon (App Store 2.0.4). The
