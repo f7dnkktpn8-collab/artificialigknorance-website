@@ -269,8 +269,7 @@ debug text or a typo.
   rebuilds the matching homepage tile and icon, and refreshes the list. It
   holds back, with a note, anything that needs a human eye: a changed picture
   count, a picture the site leaves off on purpose (the Family Lists,
-  Junkyard Titans and Clock-In cover posters, HealthTrail's "100% Private"
-  poster), and any picture marked as edited by hand (none since 20 Nov,
+  Junkyard Titans, Clock-In and HealthTrail cover posters), and any picture marked as edited by hand (none since 20 Nov,
   when Clock-In's new set replaced the hand-edited workout picture). `--accept <app>` marks an app as
   handled after a manual fix. The slot list at the top of the script is the
   map from App Store position to site file: keep it in step when a gallery
@@ -285,28 +284,41 @@ debug text or a typo.
 
 ## Current Session State
 
-Last updated: 2026-11-21: every app page and the homepage tiles for Clock-In,
-Family Lists and Junkyard Titans now show the new App Store posters (`9aad256`).
-HealthTrail 2.3.9 is the only set still to come.
+Last updated: 2026-11-22: the "For everyday life" tiles now show both posters
+whole (not cropped), and HealthTrail's tiles, page gallery and icon are on the
+new 2.3.9 posters (`91a9b3e`). Every app's pictures are now the new set except
+the four metals homepage cards, which Mike asked to leave alone.
 
 **Current focus:** None. No branches or work copies are open.
 
 **Last shipped:** the website is static, so "shipped" = pushed to `main` and
-Netlify auto-deploys. The last site change is `9aad256` (pushed 2026-11-21,
-Mike said "ship it"): six homepage tile pictures (two each for Clock-In, Family
-Lists and Junkyard Titans, all listed in `TILES` in `check-images.mjs`) now come
-from the new posters, plus Junkyard Titans' new icon (App Store 2.0.4). The
-family lists tiles are the new `fl-poster-groceries` and `fl-poster-gifts`
-files; `fl-groceries` stays the plain screen in the hero. Verified live: home, Family Lists, Junkyard Titans and
-Clock-In pages 200, every new file 200 at the new size, no em dashes. Mike said
-"don't change the metals apps": their four homepage cards (`gold-spot`,
-`silver-spot`, `copper-signals`, `lithium-markets`) are deliberately still the
-older posters and are NOT in `TILES`. Their own app pages did get the new
-posters on 2026-11-20 (`4331f67`, Escalator, SnapLedger, Clock-In and the
-metals galleries). The homepage hero phones (Escalator, Gold, Family Lists) stay
-plain app screens inside drawn phone frames on purpose, and HealthTrail's two
-tiles wait for 2.3.9. Use `https://artificialigknorance.com` with `curl -L` when
-checking live, because `www.` redirects.
+Netlify auto-deploys. The last site change is `91a9b3e` (pushed 2026-11-22,
+Mike said "ship it"). Two changes: (1) the six "For everyday life" tiles use a
+new `.media.full` style in `home.css` (posters in normal flow, 45% wide each,
+second one 30px lower, no cropping; the tile is about 800px tall on a computer,
+700px on a phone); the Watchers cards still use the old short cropped box on
+purpose. (2) HealthTrail 2.3.9 went live on the App Store on 2026-11-22
+(version 2.3.9, ten posters named `01_cover` to `10_private`): the page gallery
+is now nine pictures (`timeline`, `metrics`, `trends`, `medications`, `family`,
+`allergies`, `insurance`, `scan`, `private`; the cover is skipped because it
+repeats the page header), the two homepage tiles come from store slots 2 and 5,
+and the icon is the new one. The `private` poster reads "Not saved on our
+servers, and we never sell your data." (the corrected wording; the older "never
+sold or shared with anyone" poster is no longer in the live set), and its
+caption on the page adds the scan-photo exception with a link to `/privacy/`.
+Keep any privacy caption no stronger than that. The Ontario sample health card
+("Anita Jean Walker") in the insurance poster was already on the site before
+and is a specimen card. Verified live: home, HealthTrail, Family Lists and
+Junkyard Titans pages 200, new files 200 at the expected sizes, removed files
+404, nine figures on the HealthTrail page, no em dashes. Mike said "don't
+change the metals apps": their four homepage cards (`gold-spot`, `silver-spot`,
+`copper-signals`, `lithium-markets`) are deliberately still the older posters
+and are NOT in `TILES`; they are still cropped in their short box and Mike
+has not been asked again about them. The metals app pages did get the new
+posters on 2026-11-20. The homepage hero phones (Escalator, Gold, Family Lists)
+stay plain app screens inside drawn phone frames on purpose. Use
+`https://artificialigknorance.com` with `curl -L` when checking live, because
+`www.` redirects.
 
 **Scheduled:** nothing picture-related. The one-time Friday run
 (`website-picture-check-nov20`) ran 2026-11-20 and prepared the work above (it
@@ -316,21 +328,7 @@ could not publish alone because picture counts changed). Monday
 **Uncommitted work queued for next ship:** none.
 
 **Waiting on Mike / open decisions:**
-- **HealthTrail's new pictures (2.3.9, build 120, 10 posters, in Apple's
-  review).** The HealthTrail poster headed "100% Private and Secure" was on the
-  site until 2026-11-18 and is now removed (8 pictures; slot 2 is skipped in
-  `check-images.mjs`; the earlier note that it was never on the site was
-  wrong). 2.3.9 drops that headline, but one new poster says records are
-  "never sold or shared with anyone", which is stronger than the truth (scan
-  photos go through its server to an AI provider). Mike chose to leave 2.3.9 in
-  review as is; the corrected poster ("Not saved on our servers, and we never
-  sell your data.") ships with the next HealthTrail version. So when 2.3.9 goes
-  live (its session will message this one), keep that one poster off the site,
-  read the other nine against the privacy wording, and prepare the page by hand
-  (the picture count changes from 9 to 10). Caption any privacy poster no more
-  strongly than the corrected wording. Resolved 2026-11-20: Clock-In 0.4.26 and
-  SnapLedger 1.5.2 went live without the debug line, the "Hi Mike" greeting or
-  the typo, and their new pictures are on the site.
+- **Metals homepage cards.** They still show the older cropped posters. Ask only if Mike raises it: whole posters on those four cards would need the same `.media.full` treatment (the cards are narrow, so the posters would be small).
 - **Picture check on a schedule.** The pictures check only runs when someone
   runs it. Offered to Mike: add it to the Monday description job, publishing
   plain same-count swaps and preparing the rest. Not decided.
