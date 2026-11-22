@@ -264,7 +264,7 @@ const watchers = [
                     {
                         everyday.map((a) => (
                             <article class="tile" id={a.id}>
-                                <div class={`media tint-${a.tint}`}>
+                                <div class={`media full tint-${a.tint}`}>
                                     {a.shots.map((s, i) => (
                                         <Shot name={s[0] as string} alt={s[1] as string} width={s[2] as number} height={s[3] as number} class={`poster ${i === 0 ? 'a' : 'b'}`} />
                                     ))}
