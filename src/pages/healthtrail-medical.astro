@@ -166,111 +166,124 @@ const pageStructuredData = {
         <h2 class="text-3xl font-bold mb-3 text-center md:text-left">See it in action</h2>
         <p class="text-muted mb-8 text-center md:text-left text-sm">Real screens from the app. (Sample data shown.)</p>
 
-        <!-- Mobile: horizontal snap-scroll. Desktop: 2 columns, 3 on wide screens. 8 pictures: the store's "100% Private and Secure" poster is left off on purpose (stronger than our privacy wording). -->
+        <!-- Mobile: horizontal snap-scroll. Desktop: 2 columns, 3 on wide screens. 9 pictures: the store's cover poster is left off on purpose (it repeats the page header). Keep the privacy caption no stronger than the poster's own words. -->
         <div class="flex snap-x snap-mandatory overflow-x-auto gap-4 -mx-6 px-6 pb-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible lg:grid-cols-3">
             <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
                 <picture><source srcset="/images/screenshots/healthtrail/timeline.webp" type="image/webp" /><img
                     src="/images/screenshots/healthtrail/timeline.jpg"
-                    alt="HealthTrail Medical poster titled All Your Health in a Single Timeline, showing the appointment timeline for the Dad profile with a search bar, a January 2024 Annual Physical, a February 2024 Blood Work Panel and a started medication"
+                    alt="HealthTrail Medical poster titled Every visit, in one timeline, showing the appointment timeline for the Me profile with a Cholesterol Recheck, a Follow-up Appointment and a COVID-19 Booster"
                     width="800"
                     height="1738"
                     loading="lazy"
                     decoding="async"
                     class="w-full rounded-2xl shadow-xl border border-line"
                 /></picture>
-                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">All your health in a single timeline</figcaption>
-                <p class="text-xs text-muted mt-1">Appointments, tests and medications on one line, for each person you track.</p>
-            </figure>
-            <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
-                <picture><source srcset="/images/screenshots/healthtrail/insurance.webp" type="image/webp" /><img
-                    src="/images/screenshots/healthtrail/insurance.jpg"
-                    alt="HealthTrail Medical poster titled Scan to Auto-Fill, Data Filled Automatically, showing the Insurance tab with a Personal Health Number card plus Ontario Health and Yukon Health Care cards, each marked Active"
-                    width="800"
-                    height="1738"
-                    loading="lazy"
-                    decoding="async"
-                    class="w-full rounded-2xl shadow-xl border border-line"
-                /></picture>
-                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Insurance cards, scan to auto-fill</figcaption>
-                <p class="text-xs text-muted mt-1">Photograph a health card and the details fill in.</p>
+                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Every visit, in one timeline</figcaption>
+                <p class="text-xs text-muted mt-1">Checkups, tests and surgeries in date order, with who you saw and where.</p>
             </figure>
             <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
                 <picture><source srcset="/images/screenshots/healthtrail/metrics.webp" type="image/webp" /><img
                     src="/images/screenshots/healthtrail/metrics.jpg"
-                    alt="HealthTrail Medical poster titled Data Easily Displayed, showing the Metrics tab with BMI, blood pressure flagged Elevated and a cholesterol panel with LDL marked High and HDL marked Optimal"
+                    alt="HealthTrail Medical poster titled Know where your results stand, showing the Metrics tab with a BMI of 25.3 and a blood pressure of 125 over 78 on color gauges"
                     width="800"
                     height="1738"
                     loading="lazy"
                     decoding="async"
                     class="w-full rounded-2xl shadow-xl border border-line"
                 /></picture>
-                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Data easily displayed</figcaption>
-                <p class="text-xs text-muted mt-1">Blood pressure, cholesterol and BMI against color-coded ranges.</p>
+                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Know where your results stand</figcaption>
+                <p class="text-xs text-muted mt-1">Each result sits on a gauge built from Canadian or Brazilian guidelines.</p>
+            </figure>
+            <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
+                <picture><source srcset="/images/screenshots/healthtrail/trends.webp" type="image/webp" /><img
+                    src="/images/screenshots/healthtrail/trends.jpg"
+                    alt="HealthTrail Medical poster titled Watch your numbers move, showing a Blood Pressure screen with a falling trend line and a list of readings"
+                    width="800"
+                    height="1738"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full rounded-2xl shadow-xl border border-line"
+                /></picture>
+                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Watch your numbers move</figcaption>
+                <p class="text-xs text-muted mt-1">A chart for every test, so you can see which way things are heading.</p>
             </figure>
             <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
                 <picture><source srcset="/images/screenshots/healthtrail/medications.webp" type="image/webp" /><img
                     src="/images/screenshots/healthtrail/medications.jpg"
-                    alt="HealthTrail Medical poster titled Medications, Clearly Organized, showing the Medications screen with Metformin and Omeprazole, each marked Active, with dose details and a quick-add button"
+                    alt="HealthTrail Medical poster titled Every pill, every dose, showing Active Medications with Lisinopril, Vitamin D3 and Atorvastatin cards"
                     width="800"
                     height="1738"
                     loading="lazy"
                     decoding="async"
                     class="w-full rounded-2xl shadow-xl border border-line"
                 /></picture>
-                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Medications, clearly organized</figcaption>
-                <p class="text-xs text-muted mt-1">Dose, schedule and prescriber for every medication.</p>
-            </figure>
-            <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
-                <picture><source srcset="/images/screenshots/healthtrail/vaccines.webp" type="image/webp" /><img
-                    src="/images/screenshots/healthtrail/vaccines.jpg"
-                    alt="HealthTrail Medical poster titled Scan in Medication or Vaccines, showing the Vaccines tab with Overdue, Coming Up and Administered sections"
-                    width="800"
-                    height="1738"
-                    loading="lazy"
-                    decoding="async"
-                    class="w-full rounded-2xl shadow-xl border border-line"
-                /></picture>
-                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Vaccines, never forgotten</figcaption>
-                <p class="text-xs text-muted mt-1">Overdue, coming up and already given, in one list.</p>
+                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Every pill, every dose</figcaption>
+                <p class="text-xs text-muted mt-1">Dosage, refills and a photo of the bottle, in one card per medication.</p>
             </figure>
             <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
                 <picture><source srcset="/images/screenshots/healthtrail/family.webp" type="image/webp" /><img
                     src="/images/screenshots/healthtrail/family.jpg"
-                    alt="HealthTrail Medical poster titled Your Family's Health, Manage Children or Other Family, showing a profile dashboard with four family members, Today's Medications and Upcoming Appointments"
+                    alt="HealthTrail Medical poster titled The whole family in one app, showing five family member faces with Today's Medications and Upcoming Appointments below"
                     width="800"
                     height="1738"
                     loading="lazy"
                     decoding="async"
                     class="w-full rounded-2xl shadow-xl border border-line"
                 /></picture>
-                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Your family's health</figcaption>
-                <p class="text-xs text-muted mt-1">Separate profiles for children or other family members.</p>
+                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">The whole family in one app</figcaption>
+                <p class="text-xs text-muted mt-1">Kids, parents, a spouse. Tap a face to switch, and see today's doses at a glance.</p>
             </figure>
             <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
-                <picture><source srcset="/images/screenshots/healthtrail/canada.webp" type="image/webp" /><img
-                    src="/images/screenshots/healthtrail/canada.jpg"
-                    alt="HealthTrail Medical poster titled Built For Canada, showing a Where are you located screen with Canada selected and an Everywhere Else option"
+                <picture><source srcset="/images/screenshots/healthtrail/allergies.webp" type="image/webp" /><img
+                    src="/images/screenshots/healthtrail/allergies.jpg"
+                    alt="HealthTrail Medical poster titled Allergies, ready when it matters, showing the Allergies tab with Peanuts, Penicillin, Sulfa Drugs, Shellfish and Latex"
                     width="800"
                     height="1738"
                     loading="lazy"
                     decoding="async"
                     class="w-full rounded-2xl shadow-xl border border-line"
                 /></picture>
-                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Built for Canada</figcaption>
-                <p class="text-xs text-muted mt-1">Pick Canada or everywhere else to match where you live.</p>
+                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Allergies, ready when it matters</figcaption>
+                <p class="text-xs text-muted mt-1">The first thing a new doctor asks, answered before they finish asking.</p>
             </figure>
             <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
-                <picture><source srcset="/images/screenshots/healthtrail/conditions.webp" type="image/webp" /><img
-                    src="/images/screenshots/healthtrail/conditions.jpg"
-                    alt="HealthTrail Medical poster titled Medical History, All in One Place, showing the Conditions tab with Type 2 Diabetes, Hypertension, Hyperlipidemia and GERD, each with its status"
+                <picture><source srcset="/images/screenshots/healthtrail/insurance.webp" type="image/webp" /><img
+                    src="/images/screenshots/healthtrail/insurance.jpg"
+                    alt="HealthTrail Medical poster titled Health cards, always on you, showing a BC Medical Services Plan card and an Ontario Health card with sample numbers"
                     width="800"
                     height="1738"
                     loading="lazy"
                     decoding="async"
                     class="w-full rounded-2xl shadow-xl border border-line"
                 /></picture>
-                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Medical history in one place</figcaption>
-                <p class="text-xs text-muted mt-1">Conditions, allergies, metrics and vaccines together.</p>
+                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Health cards, always on you</figcaption>
+                <p class="text-xs text-muted mt-1">Snap your insurance card once. The numbers are ready at every front desk.</p>
+            </figure>
+            <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
+                <picture><source srcset="/images/screenshots/healthtrail/scan.webp" type="image/webp" /><img
+                    src="/images/screenshots/healthtrail/scan.jpg"
+                    alt="HealthTrail Medical poster titled Snap a photo, skip the typing, showing the Add to Medical History sheet with Allergy, Medical Condition, Health Metric and Vaccination options"
+                    width="800"
+                    height="1738"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full rounded-2xl shadow-xl border border-line"
+                /></picture>
+                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Snap a photo, skip the typing</figcaption>
+                <p class="text-xs text-muted mt-1">Photograph a lab report or vaccine card and the values fill themselves in.</p>
+            </figure>
+            <figure class="snap-center flex-shrink-0 w-72 sm:w-auto">
+                <picture><source srcset="/images/screenshots/healthtrail/private.webp" type="image/webp" /><img
+                    src="/images/screenshots/healthtrail/private.jpg"
+                    alt="HealthTrail Medical poster titled Your records stay on your phone, showing the Conditions list with Type 2 Diabetes, Hypertension, Hypercholesterolemia and GERD"
+                    width="800"
+                    height="1738"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full rounded-2xl shadow-xl border border-line"
+                /></picture>
+                <figcaption class="mt-3 text-emerald-700 font-semibold text-sm">Your records stay on your phone</figcaption>
+                <p class="text-xs text-muted mt-1">Not saved on our servers, and we never sell your data. A photo you choose to scan is the one exception (see the <a href="/privacy/" class="underline">privacy page</a>).</p>
             </figure>
         </div>
     </section>

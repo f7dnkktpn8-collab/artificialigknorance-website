@@ -14,17 +14,18 @@
   },
   "healthtrail-medical": {
     "pictures": [
-      "PurpleSource211/v4/2d/06/70/2d067007-d0be-3a8e-4dfd-97eccf7de77d/Apple_iPhone_16_Pro_Max_Screenshot_8.png",
-      "PurpleSource221/v4/63/c9/be/63c9be05-3735-b083-da41-846941cde265/Apple_iPhone_16_Pro_Max_Screenshot_7.png",
-      "PurpleSource211/v4/1a/1f/8a/1a1f8afc-a13f-fe6f-e155-d67c1d9587d3/Apple_iPhone_16_Pro_Max_Screenshot_4.png",
-      "PurpleSource211/v4/62/14/f5/6214f5eb-97e4-ba56-ecc4-6947f242369f/Apple_iPhone_16_Pro_Max_Screenshot_9.png",
-      "PurpleSource221/v4/0f/9c/5f/0f9c5f7d-1d86-9a52-2753-d0290c5aab1d/Apple_iPhone_16_Pro_Max_Screenshot_5.png",
-      "PurpleSource211/v4/26/43/dd/2643dd35-d265-02c0-886b-e7ec0d336296/Apple_iPhone_16_Pro_Max_Screenshot_1.png",
-      "PurpleSource211/v4/3b/c8/f1/3bc8f18d-4adb-ed59-1fee-160e38efb3c8/Apple_iPhone_16_Pro_Max_Screenshot_2.png",
-      "PurpleSource221/v4/0b/d1/38/0bd138f0-5aea-2b0f-43fa-a0896e574020/Apple_iPhone_16_Pro_Max_Screenshot_3.png",
-      "PurpleSource221/v4/ad/49/17/ad4917a5-b282-c63f-6362-dff4df992901/Apple_iPhone_16_Pro_Max_Screenshot_6.png"
+      "PurpleSource211/v4/99/0b/30/990b30ec-65db-7ef2-19ed-5e2f65691d6d/01_cover.png",
+      "PurpleSource221/v4/16/b0/b3/16b0b3b5-85b8-8aec-48f0-e1aab3a2ec31/02_timeline.png",
+      "PurpleSource211/v4/be/d4/e7/bed4e796-500f-1b80-3317-0a6ae7d12e09/03_lab-results.png",
+      "PurpleSource221/v4/e7/34/ac/e734ac94-1f57-903d-dadd-a45061678b8c/04_trends.png",
+      "PurpleSource211/v4/1d/8c/c6/1d8cc6b2-16f9-6666-3a07-e1692f5c1398/05_medications.png",
+      "PurpleSource211/v4/4d/e5/26/4de52602-778c-c5d8-cb38-1229e6abb2df/06_family.png",
+      "PurpleSource211/v4/9b/36/fe/9b36fe97-d66a-f4cd-7121-e066323bc357/07_allergies.png",
+      "PurpleSource211/v4/72/8a/9b/728a9bd9-d35c-30b7-6f25-bb3d379f5092/08_insurance.png",
+      "PurpleSource221/v4/a6/1d/37/a61d37d6-4211-1fe4-6f3a-2836e630234c/09_scan.png",
+      "PurpleSource221/v4/5e/dd/7a/5edd7a48-562d-75df-89bd-c3f9791ccfe1/10_private.png"
     ],
-    "icon": "Purple221/v4/3d/39/de/3d39de26-fa13-afa1-ac35-8ee2c617d3ff/AppIcon-0-0-1x_U007ephone-0-1-85-220.png"
+    "icon": "Purple211/v4/54/3f/c8/543fc8c6-61b7-fb89-af7b-3d43521e9421/AppIcon-0-0-1x_U007ephone-0-1-85-220.png"
   },
   "clock-in-everyday": {
     "pictures": [

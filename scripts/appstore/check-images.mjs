@@ -39,9 +39,8 @@ const APPS = {
   'escalator-field-command': { id: '6756789866', cc: 'us', dir: 'escalator', icon: 'escalator-field-command',
     slots: ['field-guide', 'completion-metrics', 'no-guessing', 'code-questions', 'all-units', 'hours', 'unit-details', 'cat1-testing'] },
   'healthtrail-medical': { id: '6758072258', cc: 'us', dir: 'healthtrail', icon: 'healthtrail-medical',
-    slots: ['timeline',
-      { skip: 'poster headline "100% Private and Secure" is stronger than the site\'s privacy wording (scan photos go to an AI provider); only add its replacement once Mike has seen the wording' },
-      'insurance', 'metrics', 'medications', 'vaccines', 'family', 'canada', 'conditions'] },
+    slots: [{ skip: 'cover poster; repeats the page header and would leave one picture alone in the last row' },
+      'timeline', 'metrics', 'trends', 'medications', 'family', 'allergies', 'insurance', 'scan', 'private'] },
   'clock-in-everyday': { id: '6791800212', cc: 'us', dir: 'clock-in-everyday', icon: 'clock-in-everyday',
     slots: [{ skip: 'cover poster; repeats the page header and would leave one picture alone in the last row' },
       'dashboard', 'workout-today', 'gym-machines', 'progress', 'voice-log', 'supplements'] },
@@ -67,7 +66,7 @@ const APPS = {
 
 // Homepage tiles that reuse an App Store picture: tile file -> [app, slot number]
 const TILES = {
-  'health-timeline': ['healthtrail-medical', 1],
+  'health-timeline': ['healthtrail-medical', 2],
   'health-meds': ['healthtrail-medical', 5],
   'ridge-trips': ['ridgepacker', 2],
   'ridge-catalog': ['ridgepacker', 1],
