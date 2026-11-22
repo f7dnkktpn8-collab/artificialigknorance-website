@@ -285,23 +285,28 @@ debug text or a typo.
 
 ## Current Session State
 
-Last updated: 2026-11-20: every site picture matches the live App Store
-listings as of today; the new Escalator, SnapLedger, Clock-In and four metals
-pictures are live as `4331f67`. HealthTrail 2.3.9 is the only set still to come.
+Last updated: 2026-11-22: every app page and the homepage tiles for Clock-In,
+Family Lists and Junkyard Titans now show the new App Store posters (`9aad256`).
+HealthTrail 2.3.9 is the only set still to come.
 
 **Current focus:** None. No branches or work copies are open.
 
 **Last shipped:** the website is static, so "shipped" = pushed to `main` and
-Netlify auto-deploys. The last site change is `4331f67` (pushed 2026-11-20,
-Mike said "ship it"): new App Store pictures on Escalator Field Command (8),
-SnapLedger (6, typo-free set from 1.5.2), Clock-In Everyday (6 of its 7, cover
-left off) and Copper, Gold, Silver and Lithium Watcher (6 each), the
-subscriptions homepage tile, and 15 old unused picture files removed. Verified
-live: 12 app and home pages 200, all 97 added or changed picture files 200,
-gallery counts as expected, no em dashes. Before that: HealthTrail poster
-removal (`4c9abae`) and the 2026-11-18 refresh (`6bccd1d`). Use
-`https://artificialigknorance.com` with `curl -L` when checking live, because
-`www.` redirects.
+Netlify auto-deploys. The last site change is `9aad256` (pushed 2026-11-22,
+Mike said "ship it"): six homepage tile pictures (two each for Clock-In, Family
+Lists and Junkyard Titans, all listed in `TILES` in `check-images.mjs`) now come
+from the new posters, plus Junkyard Titans' new icon (App Store 2.0.4). The
+family lists tiles are the new `fl-poster-groceries` and `fl-poster-gifts`
+files; `fl-groceries` stays the plain screen in the hero. Verified live: home, Family Lists, Junkyard Titans and
+Clock-In pages 200, every new file 200 at the new size, no em dashes. Mike said
+"don't change the metals apps": their four homepage cards (`gold-spot`,
+`silver-spot`, `copper-signals`, `lithium-markets`) are deliberately still the
+older posters and are NOT in `TILES`. Their own app pages did get the new
+posters on 2026-11-20 (`4331f67`, Escalator, SnapLedger, Clock-In and the
+metals galleries). The homepage hero phones (Escalator, Gold, Family Lists) stay
+plain app screens inside drawn phone frames on purpose, and HealthTrail's two
+tiles wait for 2.3.9. Use `https://artificialigknorance.com` with `curl -L` when
+checking live, because `www.` redirects.
 
 **Scheduled:** nothing picture-related. The one-time Friday run
 (`website-picture-check-nov20`) ran 2026-11-20 and prepared the work above (it
@@ -372,9 +377,9 @@ SnapLedger's App Store listing link switches when its 1.4.19 ships.)
 - Only Escalator Field Command, Family Lists and Junkyard Titans have an Android
   version on the site. If any other app reaches Google Play, add its badge (see
   Conventions).
-- The Clock-In Workout picture was edited in one line ("Hi Mike" became "Hi
-  there!"). The rest of the coach note in the pictures still has the app's own
-  em dashes.
+- Some store pictures carry the apps' own em dashes inside the app's text (for
+  example Escalator's search bar reads "Search - or ask in plain words" with a
+  long dash). The site's dash check only covers page text, not pictures.
 - Local-only leftovers in `mockups/` (git-ignored). Safe to delete.
 
 **Recent key decisions:**
