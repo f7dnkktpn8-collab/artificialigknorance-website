@@ -284,16 +284,26 @@ debug text or a typo.
 
 ## Current Session State
 
-Last updated: 2026-11-22: the "For everyday life" tiles now show both posters
-whole (not cropped), and HealthTrail's tiles, page gallery and icon are on the
-new 2.3.9 posters (`91a9b3e`). Every app's pictures are now the new set except
-the four metals homepage cards, which Mike asked to leave alone.
+Last updated: 2026-11-27: on phones, the homepage "The exceptions, stated
+plainly" privacy box now folds closed under its heading and its text uses the
+full width (`bb7eecb`, live). Mike's complaint was a text column about four
+words wide.
 
 **Current focus:** None. No branches or work copies are open.
 
 **Last shipped:** the website is static, so "shipped" = pushed to `main` and
-Netlify auto-deploys. The last site change is `91a9b3e` (pushed 2026-11-22,
-Mike said "ship it"). Two changes: (1) the six "For everyday life" tiles use a
+Netlify auto-deploys. The last site change is `bb7eecb` (pushed 2026-11-27,
+Mike said "Ship it"). At 640px and narrower the `.fine` box is one heading row
+with a turning chevron that opens in 0.2s; wider screens look as before. The
+script at the foot of `index.astro` closes it, so without scripts it stays
+open. The wording is the privacy disclosure: keep it. The phone view hides the
+bold lead-in inside the paragraph because the heading repeats it, so change the
+title in both places. In `home.css` leave `.privacy` on `overflow:clip` and its
+`::before` glow on `overflow-anchor:none`: without them the dark panel scrolled
+inside itself and the page jumped when the box opened. Verified live at 390px
+and 1280px.
+
+**Earlier, still true (`91a9b3e`, 2026-11-22):** (1) the six "For everyday life" tiles use a
 new `.media.full` style in `home.css` (posters in normal flow, 45% wide each,
 second one 30px lower, no cropping; the tile is about 800px tall on a computer,
 700px on a phone); the Watchers cards still use the old short cropped box on
@@ -328,6 +338,9 @@ could not publish alone because picture counts changed). Monday
 **Uncommitted work queued for next ship:** none.
 
 **Waiting on Mike / open decisions:**
+- **Question rows snap open.** The `<details>` FAQ rows on the homepage and app
+  pages open instantly. Offered 2026-11-27 to make them slide like the phone
+  box; needs his yes.
 - **Metals homepage cards.** They still show the older cropped posters. Ask only if Mike raises it: whole posters on those four cards would need the same `.media.full` treatment (the cards are narrow, so the posters would be small).
 - **Picture check on a schedule.** The pictures check only runs when someone
   runs it. Offered to Mike: add it to the Monday description job, publishing
