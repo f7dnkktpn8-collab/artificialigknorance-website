@@ -340,11 +340,23 @@ const watchers = [
                             <h3>Nothing to sell</h3><p>Your data isn't the product, so there is nothing to sell.</p>
                         </div>
                     </div>
-                    <div class="fine">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z" /><path d="M12 10v5M12 18v.01" /></svg>
-                        <p>
-                            <b>The exceptions, stated plainly.</b> The AI coach in Clock-In Everyday sends your readiness, goals and notes to a secure server so it can write today's session. Nothing is kept afterward and nothing is tied to an account. Optional AI scanning in HealthTrail Medical and SnapLedger sends the photo or file you chose to an AI provider to read it, and it is not used to train their models. Family Lists keeps your shared lists on our server, because that's how they reach your family, and only people in your family or household can see them. Junkyard Titans keeps a random game ID, your game-made name and your progress on our server so friends and trading work. The full detail is in the <a href="/privacy/">Privacy Policy</a>.
-                        </p>
+                    <!-- On phones this folds closed under its heading (see the script at the foot of this page). The wording is the privacy disclosure: keep it. -->
+                    <div class="fine" data-fold>
+                        <svg class="fine-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z" /><path d="M12 10v5M12 18v.01" /></svg>
+                        <h3 class="fine-head">
+                            <button type="button" aria-expanded="true" aria-controls="fine-body">
+                                <svg class="fine-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z" /><path d="M12 10v5M12 18v.01" /></svg>
+                                <span>The exceptions, stated plainly</span>
+                                <svg class="fine-chev" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                        </h3>
+                        <div class="fine-body" id="fine-body">
+                            <div>
+                                <p>
+                                    <b>The exceptions, stated plainly.</b> The AI coach in Clock-In Everyday sends your readiness, goals and notes to a secure server so it can write today's session. Nothing is kept afterward and nothing is tied to an account. Optional AI scanning in HealthTrail Medical and SnapLedger sends the photo or file you chose to an AI provider to read it, and it is not used to train their models. Family Lists keeps your shared lists on our server, because that's how they reach your family, and only people in your family or household can see them. Junkyard Titans keeps a random game ID, your game-made name and your progress on our server so friends and trading work. The full detail is in the <a href="/privacy/">Privacy Policy</a>.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -536,5 +548,17 @@ const watchers = [
                 if (e.key === 'Escape') requestClose();
             });
         })();
+    </script>
+    <script>
+        // The "exceptions" box folds closed on phones. Without this script it just stays open.
+        document.querySelectorAll('[data-fold]').forEach((box) => {
+            const button = box.querySelector('button');
+            if (!button) return;
+            box.classList.add('can-fold');
+            button.setAttribute('aria-expanded', 'false');
+            button.addEventListener('click', () => {
+                button.setAttribute('aria-expanded', String(box.classList.toggle('open')));
+            });
+        });
     </script>
 </Layout>

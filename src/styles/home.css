@@ -116,8 +116,8 @@
 .home .subhead{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin:56px 0 4px;flex-wrap:wrap}
 .home .subhead h3{font-size:1.6rem;letter-spacing:-.03em;font-weight:700}
 .home .subhead p{color:var(--muted);font-size:1rem}
-.home .privacy{background:linear-gradient(170deg,#0e2740,var(--navy));color:#fff;border-radius:var(--r-lg);padding:clamp(40px,7vw,88px) clamp(24px,6vw,80px);position:relative;overflow:hidden;isolation:isolate}
-.home .privacy::before{content:"";position:absolute;left:-10%;bottom:-40%;width:60%;aspect-ratio:1;background:radial-gradient(closest-side,rgba(34,190,220,.2),transparent);z-index:-1}
+.home .privacy{background:linear-gradient(170deg,#0e2740,var(--navy));color:#fff;border-radius:var(--r-lg);padding:clamp(40px,7vw,88px) clamp(24px,6vw,80px);position:relative;overflow:hidden;overflow:clip;isolation:isolate}
+.home .privacy::before{content:"";position:absolute;left:-10%;bottom:-40%;width:60%;aspect-ratio:1;background:radial-gradient(closest-side,rgba(34,190,220,.2),transparent);z-index:-1;overflow-anchor:none}
 .home .privacy h2{font-size:clamp(2rem,4.6vw,3.4rem);letter-spacing:-.04em;line-height:1.05;font-weight:720;max-width:14em}
 .home .privacy .intro{color:#c3d3e2;font-size:1.15rem;max-width:36em;margin-top:18px}
 .home .pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:48px}
@@ -179,6 +179,25 @@
 .home .feature-actions button.ghost{background:none;border:0;padding:0;font:inherit;color:#9fe0ef;font-weight:600;cursor:pointer}
 .home .feature-actions button.ghost:hover{text-decoration:underline;text-underline-offset:4px}
 .home .privacy .fine a{text-decoration:underline;text-underline-offset:3px}
+.home .fine-head{display:none}
+/* Phones: the exceptions box closes under its heading, and its text gets the full width. */
+@media (max-width:640px){
+.home .fine{display:block;padding:0;margin-inline:-10px}
+.home .fine>.fine-icon,.home .fine-body b{display:none}
+.home .fine-head{display:block}
+.home .fine-head button{display:flex;align-items:center;gap:10px;width:100%;min-height:64px;padding:16px 14px;background:none;border:0;border-radius:20px;color:#fff;font:inherit;font-size:1rem;font-weight:650;line-height:1.3;text-align:left;cursor:pointer}
+.home .fine-head button:focus-visible{outline:2px solid #9fe0ef;outline-offset:-2px}
+.home .fine-head .fine-icon{flex:none;margin:0}
+.home .fine-head span{flex:1;min-width:0;overflow-wrap:break-word}
+.home .fine-head .fine-chev{flex:none;margin:0;padding:6px;color:#c3d3e2;background:rgba(255,255,255,.12);border-radius:50%;transition:transform .2s ease}
+.home .fine-head button[aria-expanded="true"] .fine-chev{transform:rotate(180deg)}
+.home .fine:not(.can-fold) .fine-chev{display:none}
+.home .fine-body p{padding:0 14px 18px}
+.home .fine.can-fold .fine-body{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .2s ease,visibility .2s}
+.home .fine.can-fold.open .fine-body{grid-template-rows:1fr;visibility:visible}
+.home .fine.can-fold .fine-body>div{overflow:hidden;min-height:0}
+}
+@media (prefers-reduced-motion:reduce){.home .fine-body,.home .fine-head .fine-chev{transition:none!important}}
 
 /* Tiles use Apple's official App Store badge, same as the app pages. */
 .home .actions .badge img{height:40px;width:auto;display:block;transition:transform .15s}
